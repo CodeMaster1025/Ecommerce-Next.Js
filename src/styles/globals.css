@@ -44,8 +44,8 @@ body {
   body {
     @apply bg-gray-100;
   }
-  #productsCards {
-    @apply text-gray-800 bg-yellow-100 bg-opacity-5 rounded-xl border-2 border-gray-800 border-opacity-25
+  #products-cards {
+    @apply text-gray-800 bg-yellow-100 bg-opacity-5 rounded-xl border-2 border-yellow-800 border-opacity-20
   }
   #nav-bar {
     @apply text-gray-800
