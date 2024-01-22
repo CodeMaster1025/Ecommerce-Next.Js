@@ -6,7 +6,7 @@ export default function Navbar(): JSX.Element {
         <><nav id="nav-bar" className="bg-yellow-900 bg-opacity-20 border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center">
-                    <span className="sm:w-full w-1/2">
+                    <span className="sm:w-full w-1/3">
                         <Logo />
                     </span>
                     <span className="self-center text-2xl font-semibold whitespace-nowrap"></span>
