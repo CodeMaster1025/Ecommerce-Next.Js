@@ -34,7 +34,7 @@ export default function Navbar(): JSX.Element {
                             placeholder="O que procura?"></input>
                     </div>
                     <button data-collapse-toggle="navbar-search" type="button"
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        className="inline-flex items-center p-2 w-8 h-8 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
                         aria-controls="navbar-search" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
                         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -54,7 +54,7 @@ export default function Navbar(): JSX.Element {
                         </div>
                         <input type="text" id="search-navbar"
                             className="block w-full p-2 pl-10 text-sm text-gray-900 border-2 border-gray-300 rounded-lg bg-gray-50 focus:ring-gray-200"
-                            placeholder="Search..."></input>
+                            placeholder="o que procura?"></input>
                     </div>
                     <ul
                         className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-opacity-0">
