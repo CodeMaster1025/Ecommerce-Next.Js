@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -9,7 +10,6 @@ export default function Document() {
       <body className="bg-yellow-100 bg-opacity-25 font-mono">
         <Main />
         <NextScript />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
       </body>
     </Html>
   );

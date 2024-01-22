@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 export default function Footer():JSX.Element {
     return (
         <footer id="footer" className="bg-yellow-700 bg-opacity-20">

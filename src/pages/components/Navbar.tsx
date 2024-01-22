@@ -1,9 +1,12 @@
+import Script from "next/script";
+import Logo from "./Logo";
+
 export default function Navbar():JSX.Element {
     return (
         <><nav id="nav-bar" className="bg-yellow-900 bg-opacity-20 border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center">
-                    <img src="./GIOM2.png" className="h-16 sm:h-32 mr-3 bg-opacity-100" alt="GIOM LOGO" />
+                    <Logo />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap"></span>
                 </a>
                 <div className="flex md:order-2">
@@ -73,6 +76,7 @@ export default function Navbar():JSX.Element {
                     </ul>
                 </div>
             </div>
+            <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></Script>
         </nav></>
     )
 }
