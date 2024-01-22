@@ -1,6 +1,5 @@
 import Carrosel from "./components/Carousel";
 import Footer from "./components/Footer";
-import Navbar2 from "./components/NavBar2";
 import Navbar from "./components/Navbar";
 import ProductsCards from "./components/ProductsCards";
 import ProductsHorizontalList from "./components/HorizontalProductsList";
