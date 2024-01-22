@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -12,7 +20,7 @@
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb: 150, 150, 150;
   }
 }
 
@@ -29,5 +37,20 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  body {
+    @apply bg-gray-100;
+  }
+  #productsCards {
+    @apply text-gray-800 bg-yellow-100 bg-opacity-5 rounded-xl border-2 border-gray-800 border-opacity-25
+  }
+  #nav-bar {
+    @apply text-gray-800
+  }
+  #footer {
+    @apply text-gray-800
   }
 }
