@@ -8,7 +8,10 @@ export default function Footer():JSX.Element {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="#" className="flex items-center">
-                            <FooterLogo />
+                            <span className="hidden sm:flex">
+                                <FooterLogo />
+                            </span>
+                            
                             <span className="self-center text-2xl font-semibold whitespace-nowrap"></span>
                         </a>
                     </div>
