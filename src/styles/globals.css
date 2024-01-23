@@ -59,4 +59,7 @@ body {
   #footer {
     @apply text-gray-800
   }
+  #footer li {
+    @apply text-gray-700
+  }
 }
