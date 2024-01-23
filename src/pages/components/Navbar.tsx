@@ -4,7 +4,7 @@ import Logo from "./Logo";
 export default function Navbar(): JSX.Element {
     return (
         <><nav id="nav-bar" className="bg-yellow-900 bg-opacity-20 border-gray-200">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-evenly gap-2 mx-auto p-4">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-evenly gap-1 mx-auto p-2">
                 <a href="#" className="flex items-center">
                     <span className="sm:w-full w-1/2">
                         <Logo />

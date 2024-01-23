@@ -7,7 +7,7 @@ export default function Footer():JSX.Element {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="#" className="">
-                            <span className="hidden sm:flex">
+                            <span className="hidden md:flex">
                                 <FooterLogo />
                             </span>
                             
