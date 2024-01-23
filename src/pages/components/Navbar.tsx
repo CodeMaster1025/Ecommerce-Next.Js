@@ -4,7 +4,7 @@ import Logo from "./Logo";
 export default function Navbar(): JSX.Element {
     return (
         <><nav id="nav-bar" className="bg-yellow-900 bg-opacity-20 border-gray-200">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-evenly gap-8 mx-auto p-4">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-evenly gap-2 mx-auto p-4">
                 <a href="#" className="flex items-center">
                     <span className="sm:w-full w-1/2">
                         <Logo />
@@ -36,7 +36,7 @@ export default function Navbar(): JSX.Element {
                         className="text-yellow-800 text-opacity-50 md:hidden"
                         aria-controls="navbar-search" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
-                        <svg className="w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <svg className="w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
