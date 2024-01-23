@@ -29,7 +29,7 @@ export default function ProductsCards(): JSX.Element {
         const discountedPrice = (price - (price * offPrice) / 100).toFixed(2);
 
         return (
-            <div id='products-cards' className="flex flex-col items-center justify-center p-6 text-center">
+            <div id='products-cards' className="flex flex-col items-center justify-center p-6 text-center hover:scale-105">
                 <img src={image} className="p-1 rounded-lg" alt={name} />
                 <h1 className="font-bold mt-2">{name}</h1>
                 <p className="text-xs text-gray-500 line-through">R${price}</p>

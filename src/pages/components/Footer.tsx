@@ -1,13 +1,12 @@
 import FooterLogo from "./FooterLogo";
-import Logo from "./Logo";
 
 export default function Footer():JSX.Element {
     return (
-        <footer id="footer" className="bg-yellow-700 bg-opacity-20">
-            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <footer id="footer" className="flex item-center justify-center bg-yellow-700 bg-opacity-20">
+            <div className="w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <a href="#" className="flex items-center">
+                        <a href="#" className="">
                             <span className="hidden sm:flex">
                                 <FooterLogo />
                             </span>

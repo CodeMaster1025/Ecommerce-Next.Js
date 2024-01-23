@@ -41,6 +41,9 @@ body {
 }
 
 @layer components {
+  * {
+    appearance: none;
+  }
   body {
     @apply bg-gray-100;
   }
@@ -49,6 +52,9 @@ body {
   }
   #nav-bar {
     @apply text-gray-800
+  }
+  #nav-bar li {
+    @apply hover:bg-white hover:bg-opacity-15 hover:rounded-lg text-xs
   }
   #footer {
     @apply text-gray-800
