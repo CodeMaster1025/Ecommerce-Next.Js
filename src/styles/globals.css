@@ -54,7 +54,7 @@ body {
     @apply text-gray-800
   }
   #nav-bar li {
-    @apply hover:bg-white hover:bg-opacity-15 hover:rounded-lg text-xs
+    @apply hover:scale-110   hover:bg-opacity-15 hover:rounded-lg text-xs
   }
   #footer {
     @apply text-gray-800

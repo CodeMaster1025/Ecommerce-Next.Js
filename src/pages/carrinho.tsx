@@ -3,14 +3,14 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ProductsCards from "./components/ProductsCards";
 import ProductsHorizontalList from "./components/HorizontalProductsList";
+import ProductsCarrinho from "./components/ProductsCarrinho";
 
-export default function Home() {
+export default function Carrinho() {
   return (
-    <main className="p-0 m-0">
+    <main className="">
         <Navbar />
         <Carousel />
-        <ProductsHorizontalList />
-        <ProductsCards />
+        <ProductsCarrinho />
         <Footer />
     </main>
   );

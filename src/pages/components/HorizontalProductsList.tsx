@@ -30,7 +30,7 @@ export default function ProductsHorizontalList(): JSX.Element  {
       <div className="hidden sm:flex justify-center gap-8 overflow-x-scroll pb-4 hide-scroll-bar">
         {productsList.map((product, index) => (
           <div key={index} className="" onClick={() => handleCategoryClick(product.category)}>
-            <div className={`border-2 border-yellow-800 border-opacity-0 bg-yellow-100 bg-opacity-5 overflow-hidden rounded-2xl shadow-sm hover:scale-105   transition-shadow duration-300 ease-in-out ${selectedCategory === product.category ? 'border-2 border-yellow-800 border-opacity-100' : ''}`}>
+            <div className={`border-2 border-yellow-800 border-opacity-0 bg-yellow-100 bg-opacity-5 overflow-hidden rounded-2xl shadow-sm hover:scale-105   transition-shadow duration-300 ease-in-out ${selectedCategory === product.category ? 'border-2 border-yellow-800 border-opacity-20' : ''}`}>
               <img className="" src={product.image} alt={product.name}></img>
               <p className="text-gray-800 text-center mt-2 text-md uppercase font-bold">{product.name}</p>
               <p className="text-gray-800 text-center text-xs">R${product.price.toFixed(2)}</p>
