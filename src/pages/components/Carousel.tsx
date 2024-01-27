@@ -3,7 +3,7 @@ export default function Carousel():JSX.Element {
         <div className="flex justify-center items-center">
         <div id="default-carousel" className="relative w-full" data-carousel="slide">
 
-          <div className="relative h-64 overflow-hidden rounded-sm md:h-96">
+          <div className="relative h-64 overflow-hidden rounded-sm md:h-[512px]">
             <div className="hidden duration-700 ease-in-out" data-carousel-item>
 
               <img src="https://source.unsplash.com/featured/*?skirts"

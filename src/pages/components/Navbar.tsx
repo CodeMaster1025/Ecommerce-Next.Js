@@ -1,12 +1,31 @@
 import Script from "next/script";
 import Logo from "./Logo";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+
+export const update = () => {
+    const carrinho = document.getElementById('cart');
+    const storedCart = localStorage.getItem('cart');
+  
+    if (carrinho && storedCart) {
+      const cartItems = JSON.parse(storedCart);
+      const cartCount = cartItems.length;
+      const coloredCartCount = `<span className="text-red-500">${cartCount}</span>`;
+
+      carrinho.innerHTML =`CARRINHO(${coloredCartCount})`;
+    }
+  };
 
 export default function Navbar(): JSX.Element {
+
+    useEffect(() => {
+        update()
+    }, []);
+
     return (
-        <><nav id="nav-bar" className="md:h-36 bg-yellow-900 bg-opacity-20 border-gray-200">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-around gap-1 mx-auto p-2">
+        <><nav onLoad={() => update()} id="nav-bar" className="bg-yellow-900 bg-opacity-20 border-gray-200">
+            <div className="w-full flex flex-wrap items-center justify-around gap-1 p-3 md:p-9">
                 <a href="#" className="flex items-center">
-                    <span className="sm:w-full w-1/2">
+                    <span className="md:w-full w-1/2">
                         <Logo />
                     </span>
                 </a>
@@ -42,9 +61,9 @@ export default function Navbar(): JSX.Element {
                         </svg>
                     </button>
                 </div>
-                <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <div className="items-center justify-between hidden w-full md:flex md:justify-center md:items-center md:mt-8" id="navbar-search">
                     <ul
-                        className="flex flex-col p-2 md:p-0 mt-0 font-medium border border-yellow-700 border-opacity-20 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-opacity-0">
+                        className="flex flex-col p-2 md:p-0 mt-2 font-medium border border-yellow-700 border-opacity-20 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-opacity-0">
                         <li className="">
                             <a href="#"
                                 className="block py-1 pl-3 pr-4"
@@ -59,7 +78,7 @@ export default function Navbar(): JSX.Element {
                                 className="block py-1 pl-3 pr-4 ">PARCEIROS</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a id="cart" href="http://localhost:3000/carrinho"
                                 className="block py-1 pl-3 pr-4 ">CARRINHO</a>
                         </li>
                     </ul>

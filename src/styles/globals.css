@@ -12,15 +12,15 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 175, 175, 175;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 150, 150, 150;
+    --foreground-rgb: 0, 0, 0;;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
   }
 }
 
@@ -45,16 +45,16 @@ body {
     appearance: none;
   }
   body {
-    @apply bg-gray-100;
+    @apply bg-gray-50;
   }
   #products-cards {
-    @apply text-gray-800 bg-yellow-100 bg-opacity-5 rounded-xl border-2 border-yellow-800 border-opacity-20
+    @apply text-gray-800 bg-yellow-900 bg-opacity-5 rounded-xl border-2 border-yellow-800 border-opacity-20
   }
   #nav-bar {
     @apply text-gray-800
   }
   #nav-bar li {
-    @apply hover:scale-110   hover:bg-opacity-15 hover:rounded-lg text-xs
+    @apply hover:scale-110 hover:rounded-lg md:text-lg
   }
   #footer {
     @apply text-gray-800
