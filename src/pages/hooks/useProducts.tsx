@@ -109,17 +109,17 @@ export default function useProducts() {
 
     const fetchProductData = useCallback (async () => {
         try {
-            const response = await fetch('http://localhost:8093/products/getAllProductsWithId');
+            // const response = await fetch('http://localhost:8093/products/getAllProductsWithId');
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const data = await response.json();
-            console.log(data)
-            setProducts(data);
+            // if (!response.ok) {
+            //     throw new Error(`HTTP error! Status: ${response.status}`);
+            // }
+            // const data = await response.json();
+            // console.log(data)
+            // setProducts(data);
+            setProducts(products2)
         } catch (error) {
             console.error('Error fetching data:', error);
-            setProducts(products2)
         }
     }, [])
 
