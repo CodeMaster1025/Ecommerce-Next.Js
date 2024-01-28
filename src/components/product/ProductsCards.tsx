@@ -52,7 +52,7 @@ export default function ProductsCards(): JSX.Element {
                 <h1 id='product-title' className='mt-6 mb-6 md:text-3xl text-2xl'>NOSSOS PRODUTOS</h1>
             </span>
             <div className="py-4 mx-auto mt-6 mb-6 flex flex-col items-center justify-center text-gray-200">
-                <div id="products-list" className="flex flex-col justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div id="products-list" className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 gap-12">
                     {products.map((product: Product) => (
                         <div key={product.name}>{createProductTags(product)}</div>
                     ))}

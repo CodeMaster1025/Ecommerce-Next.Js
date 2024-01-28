@@ -1,6 +1,7 @@
 import Script from "next/script";
 import Logo from "./Logo";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export const update = () => {
     const carrinho = document.getElementById('cart');
@@ -78,8 +79,8 @@ export default function Navbar(): JSX.Element {
                                 className="block py-1 pl-3 pr-4 ">PARCEIROS</a>
                         </li>
                         <li>
-                            <a id="cart" href="/carrinho"
-                                className="block py-1 pl-3 pr-4 ">CARRINHO</a>
+                            <Link id="cart" href="/carrinho"
+                                className="block py-1 pl-3 pr-4 ">CARRINHO</Link>
                         </li>
                     </ul>
                 </div>

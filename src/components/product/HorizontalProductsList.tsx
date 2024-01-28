@@ -25,8 +25,8 @@ export default function ProductsHorizontalList(): JSX.Element  {
 
   return (
     <div>
-    <span className='flex  justify-center  items-center text-center'>
-            <h1 id='product-title' className='hidden md:flex mt-12 text:2xl md:text-3xl'>NOVIDADES</h1>
+    <span className='flex  justify-center items-center text-center'>
+            <h1 id='product-title' className='flex mt-12 text-2xl md:text-3xl'>NOVIDADES</h1>
     </span>
     <div className="mt-12 cursor-pointer rounded-2xl">
       <div className="flex justify-center gap-6 overflow overflow-x-scroll pb-4 hide-scroll-bar text-center">
