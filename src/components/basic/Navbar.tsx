@@ -78,7 +78,7 @@ export default function Navbar(): JSX.Element {
                                 className="block py-1 pl-3 pr-4 ">PARCEIROS</a>
                         </li>
                         <li>
-                            <a id="cart" href="http://localhost:3000/carrinho"
+                            <a id="cart" href="/carrinho"
                                 className="block py-1 pl-3 pr-4 ">CARRINHO</a>
                         </li>
                     </ul>
