@@ -1,17 +1,17 @@
-import Carrosel from "./components/Carousel";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import ProductsCards from "./components/ProductsCards";
-import ProductsHorizontalList from "./components/HorizontalProductsList";
+import Carousel from "../components/basic/Carousel";
+import Footer from "../components/basic/Footer";
+import Navbar from "../components/basic/Navbar";
+import ProductsCards from "../components/product/ProductsCards";
+import ProductsHorizontalList from "../components/product/HorizontalProductsList";
 
 export default function Home() {
   return (
-    <main className="p-0 m-0">
-        <Navbar />
-        <Carrosel />
-        <ProductsHorizontalList />
-        <ProductsCards />
-        <Footer />
+    <main className="">
+      <Navbar />
+      <Carousel />
+      <ProductsHorizontalList />
+      <ProductsCards />
+      <Footer />
     </main>
   );
 }

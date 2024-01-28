@@ -1,9 +1,9 @@
-export default function Carrosel():JSX.Element {
+export default function Carousel():JSX.Element {
     return (
         <div className="flex justify-center items-center">
         <div id="default-carousel" className="relative w-full" data-carousel="slide">
 
-          <div className="relative h-56 overflow-hidden rounded-sm md:h-96">
+          <div className="relative h-64 overflow-hidden rounded-sm md:h-[512px]">
             <div className="hidden duration-700 ease-in-out" data-carousel-item>
 
               <img src="https://source.unsplash.com/featured/*?skirts"
@@ -66,7 +66,7 @@ export default function Carrosel():JSX.Element {
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="m1 9 4-4-4-4" />
               </svg>
-              <span className="sr-only">Next</span>
+              <span className="sr-only">Proximo</span>
             </span>
           </button>
         </div>
