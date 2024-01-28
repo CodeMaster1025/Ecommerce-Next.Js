@@ -1,8 +1,8 @@
-import Carousel from "./components/basic/Carousel";
-import Footer from "./components/basic/Footer";
-import Navbar from "./components/basic/Navbar";
-import ProductsCards from "./components/product/ProductsCards";
-import ProductsHorizontalList from "./components/product/HorizontalProductsList";
+import Carousel from "../components/basic/Carousel";
+import Footer from "../components/basic/Footer";
+import Navbar from "../components/basic/Navbar";
+import ProductsCards from "../components/product/ProductsCards";
+import ProductsHorizontalList from "../components/product/HorizontalProductsList";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import useProductCartQuantities from "@/pages/hooks/useProductCartQuantities";
+import useProductCartQuantities from "@/hooks/useProductCartQuantities";
 
 type Product = {
   id: number;

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import useProducts from '@/pages/hooks/useProducts';
-import useCart from '@/pages/hooks/useCart';
+import useProducts from '@/hooks/useProducts';
+import useCart from '@/hooks/useCart';
 
 type Product = {
     id: number;
