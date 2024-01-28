@@ -1,14 +1,14 @@
-import CartComponent from "./components/cart/CartComponent";
 import Footer from "./components/basic/Footer";
 import Navbar from "./components/basic/Navbar";
 import Banner from "./components/basic/Banner";
+import CreateNewProduct from "./components/product/CreateNewProducts";
 
 
-export default function Carrinho() {
+export default function novoProduto() {
   return (
     <main className="">
         <Navbar />
-        <CartComponent />
+        <CreateNewProduct />
         <Banner />
         <Footer />
     </main>

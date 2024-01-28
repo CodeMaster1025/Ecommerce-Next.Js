@@ -69,7 +69,7 @@ export default function Footer():JSX.Element {
                 </div>
                 <hr className="my-6 sm:mx-auto border-gray-900 lg:my-8" />
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm  sm:text-center">© 2023 <a href="https://flowbite.com/" className="hover:underline">Leonardo™</a>. All Rights Reserved.
+                    <span className="text-sm  sm:text-center">© 2024 <a href="https://flowbite.com/" className="hover:underline">Leonardo™</a>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="#" className=" hover: hover:text-white">

@@ -11,7 +11,7 @@ export const update = () => {
       const cartCount = cartItems.length;
       const coloredCartCount = `<span className="text-red-500">${cartCount}</span>`;
 
-      carrinho.innerHTML =`CARRINHO(${coloredCartCount})`;
+      cartCount > 0 ? carrinho.innerHTML =`CARRINHO(${coloredCartCount})` : carrinho.innerHTML =`CARRINHO`
     }
   };
 

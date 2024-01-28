@@ -35,14 +35,14 @@ export default function CartComponent() {
   return (
     <div className="bg-opacity-10 h-full mb-16 py-8 text-black">
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl font-semibold mb-4">CARRINHO</h1>
+        <h1 id="carrinho" className="text-2xl font-semibold mb-4">CARRINHO</h1>
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-3/4">
             <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-6 mb-4">
               <table className="w-full">
                 <thead>
-                  <tr className="">
-                    <th className="text-left font-semibold">PRODUTO</th>
+                  <tr className="text-xs md:text-lg">
+                    <th className="text-left font-semibold">Produto</th>
                     <th className="text-left font-semibold">Preço</th>
                     <th className="text-left font-semibold">Quantidade</th>
                     <th className="text-left font-semibold">Total</th>
@@ -53,7 +53,7 @@ export default function CartComponent() {
             </div>
           </div>
           <div className="md:w-1/4 ">
-            <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-6">
+            <div className="bg-gray-400 bg-opacity-5 rounded-lg shadow-md p-6">
               <h2 className="text-lg font-semibold mb-4">Resumo</h2>
               <div className="flex justify-between mb-2">
                 <span>Frete</span>

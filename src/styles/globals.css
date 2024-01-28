@@ -46,20 +46,36 @@ body {
   }
   body {
     @apply bg-gray-50;
+      font-family: 'Helvetica Neue';
   }
   #products-cards {
-    @apply text-gray-800 bg-yellow-900 bg-opacity-5 rounded-xl border-2 border-yellow-800 border-opacity-20
+    @apply text-gray-800 bg-yellow-900 bg-opacity-5 rounded-xl border-2 border-yellow-800 border-opacity-20;
   }
+
+  #product-title  {
+    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
+  }
+
   #nav-bar {
-    @apply text-gray-800
+    @apply text-gray-800;
+    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
   #nav-bar li {
-    @apply hover:scale-110 hover:rounded-lg md:text-lg
+    @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
   }
   #footer {
-    @apply text-gray-800
+    @apply text-gray-800;
+    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
   #footer li {
-    @apply text-gray-700
+    @apply text-gray-700;
+  }
+
+  #banner {
+    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
+  }
+
+  #carrinho {
+    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
 }

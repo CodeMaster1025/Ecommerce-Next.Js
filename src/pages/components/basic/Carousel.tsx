@@ -66,7 +66,7 @@ export default function Carousel():JSX.Element {
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="m1 9 4-4-4-4" />
               </svg>
-              <span className="sr-only">Next</span>
+              <span className="sr-only">Proximo</span>
             </span>
           </button>
         </div>
