@@ -11,14 +11,14 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 175, 175, 175;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 0, 0, 0;;
+    --foreground-rgb: 255, 255, 255;;
     --background-start-rgb: 255, 255, 255;
     --background-end-rgb: 255, 255, 255;
   }
@@ -40,32 +40,27 @@ body {
   }
 }
 
+
 @layer components {
   * {
     appearance: none;
   }
   body {
-    @apply bg-gray-50;
-      font-family: 'Helvetica Neue';
+    @apply bg-orange-50;
+    font-family: "Playfair Display", serif;
   }
   #products-cards {
-    @apply text-gray-800 bg-yellow-900 bg-opacity-5 rounded-xl border-2 border-yellow-800 border-opacity-20;
-  }
-
-  #product-title  {
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
+    @apply text-gray-800 bg-orange-50 bg-opacity-5 rounded-xl;
   }
 
   #nav-bar {
     @apply text-gray-800;
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
   #nav-bar li {
     @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
   }
   #footer {
     @apply text-gray-800;
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
   #footer li {
     @apply text-gray-700;
@@ -76,6 +71,5 @@ body {
   }
 
   #carrinho {
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
 }

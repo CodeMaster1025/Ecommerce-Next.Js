@@ -103,7 +103,7 @@ const products2 = [
     }
 ]
 
-export default function useProducts() {
+export default function useProductsDescription(id :number) {
     const [products, setProducts] = useState<Product[]>([]);
 
 
@@ -117,7 +117,7 @@ export default function useProducts() {
             // const data = await response.json();
             // console.log(data)
             // setProducts(data);
-            setProducts(products2)
+            setProducts(products2.filter((product) => product.id == id));
         } catch (error) {
             console.error('Error fetching data:', error);
         }

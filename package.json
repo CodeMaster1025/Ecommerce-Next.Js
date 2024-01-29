@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.1.1",
     "@material-tailwind/react": "^2.1.8",
     "flowbite": "^2.2.1",
+    "flowbite-react": "^0.7.2",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
