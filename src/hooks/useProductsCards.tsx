@@ -70,17 +70,6 @@ const products2 = [
     },
     {
         "id": 6,
-        "name": "Bolsa de Couro",
-        "description": "Descrição da bolsa de couro",
-        "price": 129.99,
-        "quantityInStock": 20,
-        "categoryEnums": "ACESSORIOS",
-        "photoLink": "https://source.unsplash.com/featured/250x300?handbag",
-        "stars": 4,
-        "offPrice": 20
-    },
-    {
-        "id": 7,
         "name": "Jeans Skinny",
         "description": "Descrição do jeans skinny",
         "price": 69.99,
@@ -100,35 +89,298 @@ const products2 = [
         "photoLink": "https://source.unsplash.com/featured/250x300?coat",
         "stars": 4,
         "offPrice": 20
-    }
+    },
+    {
+        "id": 10,
+        "name": "Camiseta Listrada",
+        "description": "Descrição da camiseta listrada",
+        "price": 29.99,
+        "quantityInStock": 60,
+        "categoryEnums": "CAMISETAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?striped-shirt",
+        "stars": 3,
+        "offPrice": 10
+    },
+    {
+        "id": 11,
+        "name": "Relógio Elegante",
+        "description": "Descrição do relógio elegante",
+        "price": 119.99,
+        "quantityInStock": 30,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?watch",
+        "stars": 5,
+        "offPrice": 25
+    },
+    {
+        "id": 12,
+        "name": "Shorts Esportivo",
+        "description": "Descrição do shorts esportivo",
+        "price": 49.99,
+        "quantityInStock": 70,
+        "categoryEnums": "FITNESS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?sport-shorts",
+        "stars": 4,
+        "offPrice": 10
+    },
+    {
+        "id": 13,
+        "name": "Tênis Casual",
+        "description": "Descrição do tênis casual",
+        "price": 89.99,
+        "quantityInStock": 50,
+        "categoryEnums": "SAPATOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?sneakers",
+        "stars": 4,
+        "offPrice": 15
+    },
+    {
+        "id": 14,
+        "name": "Colar de Pérolas",
+        "description": "Descrição do colar de pérolas",
+        "price": 69.99,
+        "quantityInStock": 25,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?pearl-necklace",
+        "stars": 5,
+        "offPrice": 20
+    },
+    {
+        "id": 15,
+        "name": "Boné Esportivo",
+        "description": "Descrição do boné esportivo",
+        "price": 34.99,
+        "quantityInStock": 40,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?sport-cap",
+        "stars": 3,
+        "offPrice": 10
+    },
+    {
+        "id": 16,
+        "name": "Mala de Viagem",
+        "description": "Descrição da mala de viagem",
+        "price": 99.99,
+        "quantityInStock": 20,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?travel-bag",
+        "stars": 4,
+        "offPrice": 15
+    },
+    {
+        "id": 17,
+        "name": "Vestido de Festa",
+        "description": "Descrição do vestido de festa",
+        "price": 129.99,
+        "quantityInStock": 30,
+        "categoryEnums": "VESTIDOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?party-dress",
+        "stars": 5,
+        "offPrice": 25
+    },
+    {
+        "id": 18,
+        "name": "Bermuda Cargo",
+        "description": "Descrição da bermuda cargo",
+        "price": 49.99,
+        "quantityInStock": 60,
+        "categoryEnums": "CALCAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?cargo-shorts",
+        "stars": 4,
+        "offPrice": 10
+    },
+    {
+        "id": 19,
+        "name": "Camisa Social",
+        "description": "Descrição da camisa social",
+        "price": 79.99,
+        "quantityInStock": 40,
+        "categoryEnums": "CAMISAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?dress-shirt",
+        "stars": 4,
+        "offPrice": 15
+    },
+    {
+        "id": 20,
+        "name": "Chapéu de Sol",
+        "description": "Descrição do chapéu de sol",
+        "price": 29.99,
+        "quantityInStock": 80,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?sun-hat",
+        "stars": 3,
+        "offPrice": 10
+    },
+    {
+        "id": 21,
+        "name": "Jaqueta Jeans",
+        "description": "Descrição da jaqueta jeans",
+        "price": 89.99,
+        "quantityInStock": 35,
+        "categoryEnums": "CASACOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?denim-jacket",
+        "stars": 4,
+        "offPrice": 15
+    },
+    {
+        "id": 22,
+        "name": "Sapato Social",
+        "description": "Descrição do sapato social",
+        "price": 99.99,
+        "quantityInStock": 25,
+        "categoryEnums": "SAPATOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?dress-shoes",
+        "stars": 5,
+        "offPrice": 20
+    },
+    {
+        "id": 23,
+        "name": "Saia Longa",
+        "description": "Descrição da saia longa",
+        "price": 69.99,
+        "quantityInStock": 45,
+        "categoryEnums": "SAIAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?long-skirt",
+        "stars": 4,
+        "offPrice": 10
+    },
+    {
+        "id": 24,
+        "name": "Pulseira de Prata",
+        "description": "Descrição da pulseira de prata",
+        "price": 39.99,
+        "quantityInStock": 50,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?silver-bracelet",
+        "stars": 4,
+        "offPrice": 10
+    },
+    {
+        "id": 25,
+        "name": "Calça Legging",
+        "description": "Descrição da calça legging",
+        "price": 39.99,
+        "quantityInStock": 70,
+        "categoryEnums": "FITNESS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?leggings",
+        "stars": 3,
+        "offPrice": 10
+    },
+    {
+        "id": 26,
+        "name": "Moletom Casual",
+        "description": "Descrição do moletom casual",
+        "price": 79.99,
+        "quantityInStock": 30,
+        "categoryEnums": "CASACOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?casual-sweatshirt",
+        "stars": 4,
+        "offPrice": 15
+    },
+    {
+        "id": 27,
+        "name": "Chinelo Slide",
+        "description": "Descrição do chinelo slide",
+        "price": 24.99,
+        "quantityInStock": 90,
+        "categoryEnums": "SAPATOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?slide-sandals",
+        "stars": 3,
+        "offPrice": 10
+    },
+    {
+        "id": 29,
+        "name": "Boné Snapback",
+        "description": "Descrição do boné snapback",
+        "price": 29.99,
+        "quantityInStock": 40,
+        "categoryEnums": "ACESSORIOS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?snapback-hat",
+        "stars": 4,
+        "offPrice": 10
+    },
+    {
+        "id": 30,
+        "name": "Blusa de Tricô",
+        "description": "Descrição da blusa de tricô",
+        "price": 69.99,
+        "quantityInStock": 25,
+        "categoryEnums": "BLUSAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?knit-sweater",
+        "stars": 4,
+        "offPrice": 15
+    },
+    {
+        "id": 31,
+        "name": "Calça Cargo",
+        "description": "Descrição da calça cargo",
+        "price": 59.99,
+        "quantityInStock": 35,
+        "categoryEnums": "CALCAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300?cargo-pants",
+        "stars": 3,
+        "offPrice": 10
+    },
+    {
+        "id": 33,
+        "name": "Camiseta Manga Longa",
+        "description": "Descrição da camiseta manga longa",
+        "price": 34.99,
+        "quantityInStock": 60,
+        "categoryEnums": "CAMISETAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300/long-sleeve-shirt",
+        "stars": 4,
+        "offPrice": 10
+      },
+      {
+        "id": 39,
+        "name": "Blusa Estampada",
+        "description": "Descrição da blusa estampada",
+        "price": 39.99,
+        "quantityInStock": 45,
+        "categoryEnums": "BLUSAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300/patterned-blouse",
+        "stars": 3,
+        "offPrice": 10
+      },
+      {
+        "id": 47,
+        "name": "Camisa Polo",
+        "description": "Descrição da camisa polo",
+        "price": 54.99,
+        "quantityInStock": 35,
+        "categoryEnums": "CAMISAS",
+        "photoLink": "https://source.unsplash.com/featured/250x300/polo-shirt",
+        "stars": 4,
+        "offPrice": 15
+      }
 ]
 
 export default function useProducts() {
-    const [products, setProducts] = useState<Product[]>([]);
-
-
-    const fetchProductData = useCallback (async () => {
-        try {
-            // const response = await fetch('http://localhost:8093/products/getAllProductsWithId');
-
-            // if (!response.ok) {
-            //     throw new Error(`HTTP error! Status: ${response.status}`);
-            // }
-            // const data = await response.json();
-            // console.log(data)
-            // setProducts(data);
-            setProducts(products2)
-        } catch (error) {
-            console.error('Error fetching data:', error);
+    const [products, setProducts] = useState<Product[]>(products2);
+    const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+    const [categoria, setCategoria] = useState("");
+  
+    const onSetCategoryClick = useCallback(
+      (categoryValue: string) => {
+        setCategoria(categoryValue);
+  
+        if (categoryValue === "") {
+          // Se a categoria estiver vazia, mostrar todos os produtos
+          setFilteredProducts([]);
+        } else {
+          // Filtrar os produtos com base na categoria
+          const filtered = products2.filter(
+            (product) => product.categoryEnums === categoryValue
+          );
+          setFilteredProducts(filtered);
         }
-    }, [])
 
+      },
+      [setCategoria, setFilteredProducts]
+    );
 
-    useEffect(() => {
-        fetchProductData();
-    }, []);
-
-    return (
-        {products}
-    )
-}
+    const displayedProducts = categoria ? filteredProducts : products;
+ 
+    return { displayedProducts, onSetCategoryClick, categoria };
+  }
