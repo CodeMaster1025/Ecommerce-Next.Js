@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import useProducts from '@/hooks/useProducts';
+import useProductsCards from '@/hooks/useProductsCards';
 import useCart from '@/hooks/useCart';
 
 type Product = {
@@ -16,15 +16,15 @@ type Product = {
 
 
 export default function ProductsCards(): JSX.Element {
-    const { products } = useProducts();
+    const { products } = useProductsCards();
     const { addToCart } = useCart();
 
     function createProductTags(products: Product): JSX.Element {
-        const { name, price, photoLink, offPrice, stars } = products;
+        const { id, name, price, photoLink, offPrice, stars } = products;
         const discountedPrice = (price - (price * offPrice) / 100).toFixed(2);
 
         return (
-            <div id='products-cards' key={name} className="relative flex flex-col items-center justify-center p-6 text-center hover:scale-105">
+            <div id='products-cards' key={id} className="relative flex flex-col items-center justify-center p-6 text-center hover:scale-105">
                 <img src={photoLink} className="p-1 rounded-lg" alt={name} />
                 <button
                     onClick={() => { addToCart(products) }}
@@ -54,7 +54,7 @@ export default function ProductsCards(): JSX.Element {
             <div className="py-4 mx-auto mt-6 mb-6 flex flex-col items-center justify-center text-gray-200">
                 <div id="products-list" className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 gap-12">
                     {products.map((product: Product) => (
-                        <div key={product.name}>{createProductTags(product)}</div>
+                        <div key={product.id}>{createProductTags(product)}</div>
                     ))}
                 </div>
             </div>
