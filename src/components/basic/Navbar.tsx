@@ -30,6 +30,7 @@ export default function Navbar(): JSX.Element {
                         <Logo />
                     </span>
                 </a>
+                
                 <div className="flex md:order-2">
                     <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false"
                         className="md:hidden focus:outline-none rounded-lg p-1 mr-1">
@@ -68,7 +69,7 @@ export default function Navbar(): JSX.Element {
                         <li className="">
                             <a href="#"
                                 className="block py-1 pl-3 pr-4"
-                                aria-current="page">DESTAQUES</a>
+                                aria-current="page">SOBRE NOS</a>
                         </li>
                         <li>
                             <a href="#"

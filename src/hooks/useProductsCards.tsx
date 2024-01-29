@@ -20,7 +20,7 @@ const products2 = [
         "price": 89.99,
         "quantityInStock": 100,
         "categoryEnums": "VESTIDOS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?dress",
+        "photoLink": "https://source.unsplash.com/featured/250x300?dress",
         "stars": 5,
         "offPrice": 20
     },
@@ -31,7 +31,7 @@ const products2 = [
         "price": 59.99,
         "quantityInStock": 100,
         "categoryEnums": "SAIAS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?skirt",
+        "photoLink": "https://source.unsplash.com/featured/250x300?skirt",
         "stars": 100,
         "offPrice": 15
     },
@@ -42,7 +42,7 @@ const products2 = [
         "price": 59.99,
         "quantityInStock": 100,
         "categoryEnums": "FITNESS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?fitness",
+        "photoLink": "https://source.unsplash.com/featured/250x300?fitness",
         "stars": 5,
         "offPrice": 15
     },
@@ -53,7 +53,7 @@ const products2 = [
         "price": 59.99,
         "quantityInStock": 100,
         "categoryEnums": "SAPATOS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?sapato",
+        "photoLink": "https://source.unsplash.com/featured/250x300?sapato",
         "stars": 10,
         "offPrice": 15
     },
@@ -64,7 +64,7 @@ const products2 = [
         "price": 39.99,
         "quantityInStock": 80,
         "categoryEnums": "BLUSAS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?blusa",
+        "photoLink": "https://source.unsplash.com/featured/250x300?blusa",
         "stars": 3,
         "offPrice": 10
     },
@@ -75,7 +75,7 @@ const products2 = [
         "price": 129.99,
         "quantityInStock": 20,
         "categoryEnums": "ACESSORIOS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?handbag",
+        "photoLink": "https://source.unsplash.com/featured/250x300?handbag",
         "stars": 4,
         "offPrice": 20
     },
@@ -86,7 +86,7 @@ const products2 = [
         "price": 69.99,
         "quantityInStock": 40,
         "categoryEnums": "CALCAS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?jeans",
+        "photoLink": "https://source.unsplash.com/featured/250x300?jeans",
         "stars": 4,
         "offPrice": 10
     },
@@ -97,7 +97,7 @@ const products2 = [
         "price": 149.99,
         "quantityInStock": 10,
         "categoryEnums": "CASACOS",
-        "photoLink": "https://source.unsplash.com/featured/250x200?coat",
+        "photoLink": "https://source.unsplash.com/featured/250x300?coat",
         "stars": 4,
         "offPrice": 20
     }
@@ -126,7 +126,7 @@ export default function useProducts() {
 
     useEffect(() => {
         fetchProductData();
-    }, [fetchProductData]);
+    }, []);
 
     return (
         {products}

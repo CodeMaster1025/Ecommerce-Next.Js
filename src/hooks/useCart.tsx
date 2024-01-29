@@ -28,8 +28,7 @@ export default function useCart() {
             setCart((prevCart) => [...prevCart, product]);
         }
     };
-
-
+    
     return (
         {cart, addToCart}
     )

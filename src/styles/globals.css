@@ -53,29 +53,26 @@ body {
   }
 
   #product-title  {
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
+    font-family: 'Dancing Script', 'Helvetica Neue';
   }
 
   #nav-bar {
     @apply text-gray-800;
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
   #nav-bar li {
     @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
   }
   #footer {
     @apply text-gray-800;
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
   #footer li {
     @apply text-gray-700;
   }
 
   #banner {
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
+    font-family: 'Dancing Script', 'Helvetica Neue',;
   }
 
   #carrinho {
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
 }
