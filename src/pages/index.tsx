@@ -4,7 +4,7 @@ import Navbar from "../components/basic/Navbar";
 import ProductsCards from "../components/product/ProductsCards";
 import CarouselFlow from "@/components/basic/CarouselFlow";
 import CarouselGrid from "@/components/basic/CarouselGrid";
-import Categories from "@/components/basic/Categories";
+import Categories from "@/components/product/Categories";
 
 export default function Home() {
   const router = useRouter();

@@ -12,7 +12,7 @@ type Product = {
     stars: number;
 };
 
-const products2 = [
+const productsList = [
     {
         "id": 1,
         "name": "Vestido Floral",
@@ -320,44 +320,11 @@ const products2 = [
         "photoLink": "https://source.unsplash.com/featured/250x300?cargo-pants",
         "stars": 3,
         "offPrice": 10
-    },
-    {
-        "id": 33,
-        "name": "Camiseta Manga Longa",
-        "description": "Descrição da camiseta manga longa",
-        "price": 34.99,
-        "quantityInStock": 60,
-        "categoryEnums": "CAMISETAS",
-        "photoLink": "https://source.unsplash.com/featured/250x300/long-sleeve-shirt",
-        "stars": 4,
-        "offPrice": 10
-      },
-      {
-        "id": 39,
-        "name": "Blusa Estampada",
-        "description": "Descrição da blusa estampada",
-        "price": 39.99,
-        "quantityInStock": 45,
-        "categoryEnums": "BLUSAS",
-        "photoLink": "https://source.unsplash.com/featured/250x300/patterned-blouse",
-        "stars": 3,
-        "offPrice": 10
-      },
-      {
-        "id": 47,
-        "name": "Camisa Polo",
-        "description": "Descrição da camisa polo",
-        "price": 54.99,
-        "quantityInStock": 35,
-        "categoryEnums": "CAMISAS",
-        "photoLink": "https://source.unsplash.com/featured/250x300/polo-shirt",
-        "stars": 4,
-        "offPrice": 15
-      }
+    }
 ]
 
 export default function useProducts() {
-    const [products, setProducts] = useState<Product[]>(products2);
+    const [products, setProducts] = useState<Product[]>(productsList);
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
     const [categoria, setCategoria] = useState("");
   
@@ -366,11 +333,9 @@ export default function useProducts() {
         setCategoria(categoryValue);
   
         if (categoryValue === "") {
-          // Se a categoria estiver vazia, mostrar todos os produtos
           setFilteredProducts([]);
         } else {
-          // Filtrar os produtos com base na categoria
-          const filtered = products2.filter(
+          const filtered = productsList.filter(
             (product) => product.categoryEnums === categoryValue
           );
           setFilteredProducts(filtered);
