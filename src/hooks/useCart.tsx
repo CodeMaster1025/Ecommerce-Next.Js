@@ -19,11 +19,11 @@ export default function useCart() {
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
         update()
-    }, [cart, setCart]);
+    }, [cart]);
 
     const addToCart = (product: Product): void => {
         const isProductInCart = cart.some((cartItem) => cartItem.id === product.id);
-
+        
         if (!isProductInCart) {
             setCart((prevCart) => [...prevCart, product]);
         }
