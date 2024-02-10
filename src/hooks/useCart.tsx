@@ -16,17 +16,15 @@ type Product = {
 export default function useCart() {
     const [cart, setCart] = useState<Product[]>([]);
 
-    useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cart));
-        update()
-    }, [cart]);
-
     const addToCart = (product: Product): void => {
         const isProductInCart = cart.some((cartItem) => cartItem.id === product.id);
         
         if (!isProductInCart) {
             setCart((prevCart) => [...prevCart, product]);
         }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            update()
     };
     
     return (

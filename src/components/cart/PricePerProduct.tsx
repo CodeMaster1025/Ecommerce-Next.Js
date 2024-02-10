@@ -52,7 +52,7 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => handleDecreaseQuantity(product.id)}
-                  className="border border-black border-opacity-15 hover:scale-105 rounded-md py-1 px-2"
+                  className="border border-black border-opacity-15 hover:scale-115 rounded-md py-1 px-2"
                 >
                   -
                 </button>

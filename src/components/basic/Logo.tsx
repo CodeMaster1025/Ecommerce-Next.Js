@@ -10,10 +10,13 @@ export default function Logo() {
 
   return (
     <div onClick={handleClick}>
-      <Image
+      <Image className='w-auto h-auto'
         src="/GIOM2.png"
         width={250}
         height={250}
+        placeholder="blur"
+        blurDataURL={'/GIOM2.png'}
+        priority={true}
         alt="GIOM LOGO"
       />
     </div>

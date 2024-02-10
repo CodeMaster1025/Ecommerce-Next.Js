@@ -23,7 +23,7 @@ export default function Navbar(): JSX.Element {
     }, []);
 
     return (
-        <nav onLoad={() => update()} id="nav-bar" className="sticky top-0 z-50 shadow-sm bg-orange-100 bg-opacity-100 border-opacity-0">
+        <nav onLoad={() => update()} id="nav-bar" className="sticky top-0 z-50 shadow-sm bg-orange-100">
             <div className="w-full flex flex-wrap items-center justify-around gap-1 p-3 md:p-9">
                 <a href="#" className="flex items-center">
                     <span className="md:w-full w-1/2">

@@ -59,6 +59,9 @@ body {
   #nav-bar li {
     @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
   }
+  #categories-id li {
+    @apply hover:underline
+  }
   #footer {
     @apply text-gray-800;
   }

@@ -29,7 +29,7 @@ export default function ProductsCards(categoryProps: any): any {
           onClick={() => {
             addToCart(product);
           }}
-          className="absolute bottom-1 right-3 mb-2 bg-yellow-200 bg-opacity-25 text-black px-1 py-1 md:px-1 md:py-1 rounded-full hover:bg-yellow-100 focus:bg-yellow-400"
+          className="absolute bottom-1 right-3 mb-2 bg-yellow-200 bg-opacity-25 text-black px-1 py-1 md:px-1 md:py-1 rounded-full hover:bg-yellow-400"
         >
           <svg width="20px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
