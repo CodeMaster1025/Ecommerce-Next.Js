@@ -38,7 +38,7 @@ export default function CartComponent() {
         <h1 id="carrinho" className="text-2xl font-semibold mb-4"></h1>
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-3/4">
-            <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-6 mb-4">
+            <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-4 mb-4">
               <table className="w-full">
                 <thead>
                   <tr className="text-xs md:text-lg">
