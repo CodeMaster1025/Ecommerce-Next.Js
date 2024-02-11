@@ -15,10 +15,9 @@ type Product = {
 export default function useQuantities(products :Product[], totalPriceFunction: any) {
     const [quantities, setQuantities] = useState<number[]>([1]);
 
-
     const handleDecreaseQuantity = (productId: number) => {
         setQuantities((prevQuantities) => {
-          const updatedQuantity = Math.max((prevQuantities[productId] || 1) - 1, 1);
+          const updatedQuantity = Math.max((prevQuantities[productId] || 1) - 1, 0);
           return { ...prevQuantities, [productId]: updatedQuantity };
         });
       };
@@ -40,7 +39,7 @@ export default function useQuantities(products :Product[], totalPriceFunction: a
       }, [products, quantities]);
 
       return (
-        {quantities, handleDecreaseQuantity, handleIncreaseQuantity}
+        {quantities, handleDecreaseQuantity, handleIncreaseQuantity, setQuantities}
       )
 
 }

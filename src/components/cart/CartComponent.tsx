@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PricePerProduct from "./PricePerProduct";
+import useCart from "@/hooks/useCart";
 
 type Product = {
   id: number;
@@ -14,10 +15,8 @@ type Product = {
 };
 
 export default function CartComponent() {
-  const [products, setProducts] = useState<any[]>([]);
   const [total, setTotal] = useState<number>(1);
-  const [cart, setCart] = useState<Product[]>([]);
-
+  const { setCart, cart } = useCart();
 
   useEffect(() => {
     const storedCart = localStorage.getItem('cart');
@@ -26,11 +25,6 @@ export default function CartComponent() {
       setCart(parsedCart);
     }
   }, []);
-
-  useEffect(() => {
-    setProducts(cart);
-  }, [cart]);
-
 
   return (
     <div className="bg-opacity-10 h-full mb-16 py-8 text-black">
@@ -48,7 +42,7 @@ export default function CartComponent() {
                     <th className="text-left font-semibold">Total</th>
                   </tr>
                 </thead>
-                <PricePerProduct totalPriceFunction={setTotal} products={products} />
+                <PricePerProduct totalPriceFunction={setTotal} products={cart} />
               </table>
             </div>
           </div>

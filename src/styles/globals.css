@@ -50,14 +50,10 @@ body {
     font-family: "Playfair Display", serif;
   }
   #products-cards {
-    @apply text-gray-800 bg-orange-50 bg-opacity-5 rounded-xl;
-  }
-
-  #nav-bar {
-    @apply text-gray-800;
+    @apply text-black bg-orange-50 bg-opacity-5 rounded-xl;
   }
   #nav-bar li {
-    @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
+    @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg hover:underline
   }
   #categories-id li {
     @apply hover:underline

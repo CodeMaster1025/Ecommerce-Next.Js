@@ -15,19 +15,43 @@ type Product = {
 
 export default function useCart() {
     const [cart, setCart] = useState<Product[]>([]);
+    const [cartUpdateFlag, setCartUpdateFlag] = useState<number>(0);
+    
+    useEffect(() => {
+        if(cart.length == 0) {
+            
+        }
+        const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
+        setCart(savedCart);
+        setCartUpdateFlag(0);
+    }, [cartUpdateFlag]);
 
     const addToCart = (product: Product): void => {
-        const isProductInCart = cart.some((cartItem) => cartItem.id === product.id);
-        
-        if (!isProductInCart) {
-            setCart((prevCart) => [...prevCart, product]);
-        }
+        setCart((prevCart) => {
+            const isProductInCart = prevCart.some((cartItem) => cartItem.id === product.id);
 
-            localStorage.setItem('cart', JSON.stringify(cart));
-            update()
+            if (!isProductInCart) {
+                const newCart = [...prevCart, product];
+                localStorage.setItem('cart', JSON.stringify(newCart));
+                update();
+                setCartUpdateFlag(1);
+                return newCart;
+            }
+            return prevCart;
+        });
     };
-    
+
+    const removeProductById = (productId: number): void => {
+        setCart((prevCart) => {
+            const newCart = prevCart.filter((cartItem) => cartItem.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(newCart));
+            update();
+            setCartUpdateFlag(1);
+            return newCart;
+        });
+    };
+
     return (
-        {cart, addToCart}
+        { cart, cartUpdateFlag, addToCart,setCart, removeProductById }
     )
 }

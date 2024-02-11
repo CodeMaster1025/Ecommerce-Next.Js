@@ -2235,7 +2235,7 @@ flowbite-react@^0.7.2:
     sharp "^0.32.6"
     tailwind-merge "^2.0.0"
 
-flowbite@^2.0.0:
+flowbite@^2.0.0, flowbite@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/flowbite/-/flowbite-2.2.1.tgz#9e22be9ff746bccb9fcf87979bbc5e41a16eaf7a"
   integrity sha512-iiZyBTtriEDRHrqXZgpKHaxl4B2J8HZUP8Yn1RXozUDKszWHDVj4GxQqMMB9AJHRWOgXV/4E/LJZ/zqQgBUhWA==
