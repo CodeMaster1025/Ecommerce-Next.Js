@@ -36,10 +36,10 @@ export default function Navbar(): JSX.Element {
                         <Logo />
                     </span>
                 </a>
-                <div className="flex items-center md:order-2">
+                <div className="flex items-center justify-center md:order-2">
                     <Link id="" href="/carrinho" className="block mr-2 mt-1 md:block">
-                        <button className="bg-orange-200 bg-opacity-50 rounded-full">
-                            <span className="relative inline-block md:mt-2 md:scale-125">
+                        <button className="bg-orange-200 bg-opacity-25 md:shadow-md rounded-full justify-center items-center">
+                            <span className="relative inline-block md:p-2 md:scale-125">
                                 <svg
                                     width="20px"
                                     height="20px"
@@ -56,7 +56,7 @@ export default function Navbar(): JSX.Element {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span id="cart" className="md:text-sm absolute top-0 right-0 -mt-2 -mr-2 px-1 text-xs bg-orange-500 text-white rounded-full">
+                                <span id="cart" className="md:text-xs absolute -top-1 -right-1 md:top-0 md:right-0 px-0.5  text-xs bg-orange-500 text-white rounded-lg">
 
                                 </span>
                             </span>
