@@ -57,17 +57,17 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
             </td>
             <td className="py-2">${product.price}</td>
             <td className="py-2">
-              <div className="flex items-center gap-1">
+              <div className="flex items-center">
                 <button
                   onClick={() => handleDecreaseQuantity(product.id)}
-                  className="border border-black border-opacity-10 hover:scale-105 rounded-md p-1 md:p-2"
+                  className="border border-black border-opacity-10 hover:scale-105 rounded-md p-0.5 md:p-1"
                 >
                   -
                 </button>
                 <span className="text-center text-sm md:text-xl w-6 p-0">{quantities[product.id] || 1}</span>
                 <button
                   onClick={() => handleIncreaseQuantity(product.id)}
-                  className="border border-black border-opacity-10 hover:scale-105 rounded-md p-1 md:p-2"
+                  className="border border-black border-opacity-10 hover:scale-105 rounded-md p-0.5 md:p-1"
                 >
                   +
                 </button>
