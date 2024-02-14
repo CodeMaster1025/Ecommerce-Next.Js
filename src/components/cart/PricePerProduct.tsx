@@ -18,7 +18,6 @@ interface Props {
   products: Product[];
   totalPriceFunction: any;
 }
-
 export default function PricePerProduct({ products, totalPriceFunction }: Props) {
 
   const processedProductIds = new Set<number>();
@@ -49,7 +48,7 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
             <td  className="py-2">
               <div className="flex items-center">
                 <img
-                  className="hidden md:block md:w-16 mr-4"
+                  className="w-6 md:w-16 mr-4"
                   src={product.photoLink}
                   alt={product.name}
                 />
@@ -61,7 +60,7 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
               <div className="flex items-center gap-1">
                 <button
                   onClick={() => handleDecreaseQuantity(product.id)}
-                  className="border border-black border-opacity-10 hover:scale-115 rounded-md p-1 md:p-2"
+                  className="border border-black border-opacity-10 hover:scale-105 rounded-md p-1 md:p-2"
                 >
                   -
                 </button>
@@ -72,7 +71,7 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
                 >
                   +
                 </button>
-                <button onClick={() => {removeProductById(product.id) }} className=" opacity-40 transition hover:text-red-600 hover:scale-105 rounded-md p-1 md:p-2">
+                <button onClick={() => {removeProductById(product.id) }} className="opacity-40 transition hover:text-red-800 hover:scale-105 rounded-md p-1 md:p-2">
                   <span className="sr-only">Remove item</span>
 
                   <svg
