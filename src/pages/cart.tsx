@@ -4,7 +4,7 @@ import Navbar from "../components/basic/Navbar";
 import Banner from "../components/basic/Banner";
 
 
-export default function Carrinho() {
+export default function Cart() {
   return (
     <main className="">
         <Navbar />

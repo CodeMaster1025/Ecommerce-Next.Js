@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export const update = () => {
-    const carrinho = document.getElementById("cart");
+    const cartId = document.getElementById("cart");
     const storedCart = localStorage.getItem("cart");
 
-    if (carrinho && storedCart) {
+    if (cartId && storedCart) {
         const cartItems = JSON.parse(storedCart);
         const cartCount = cartItems.length;
         const coloredCartCount = `${cartCount}`;
 
-        cartCount > 0 ? carrinho.innerHTML = `${coloredCartCount}` : carrinho.innerHTML = ``
+        cartCount > 0 ? cartId.innerHTML = `${coloredCartCount}` : cartId.innerHTML = ``
     }
 
 };
@@ -37,7 +37,7 @@ export default function Navbar(): JSX.Element {
                     </span>
                 </a>
                 <div className="flex items-center justify-center md:order-2">
-                    <Link id="" href="/carrinho" className="block mr-2 mt-1 md:block">
+                    <Link id="" href="/cart" className="block mr-2 mt-1 md:block">
                         <button className="bg-orange-200 bg-opacity-25 md:shadow-md rounded-full justify-center items-center">
                             <span className="relative inline-block md:p-2 md:scale-125">
                                 <svg
