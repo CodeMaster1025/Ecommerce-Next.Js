@@ -27,12 +27,12 @@ export default function CartComponent() {
   }, []);
 
   return (
-    <div className="bg-opacity-10 h-full mb-16 py-8 text-black">
+    <div className="bg-opacity-10 h-full mb-0 py-8 text-black">
       <div className="container mx-auto px-4">
         <h1 id="carrinho" className="text-2xl font-semibold mb-4"></h1>
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-3/4">
-            <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-4 mb-4">
+            <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-4 mb-6">
               <table className="w-full">
                 <thead>
                   <tr className="text-xs md:text-lg">

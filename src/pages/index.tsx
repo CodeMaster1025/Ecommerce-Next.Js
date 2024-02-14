@@ -5,6 +5,9 @@ import ProductsCards from "../components/product/ProductsCards";
 import CarouselFlow from "@/components/basic/CarouselFlow";
 import CarouselGrid from "@/components/basic/CarouselGrid";
 import Categories from "@/components/product/Categories";
+import Comments from "@/components/basic/Comments";
+import Banner from "@/components/basic/Banner";
+import CollectionGrid from "@/components/product/CollectionGrid";
 
 export default function Home() {
   const router = useRouter();
@@ -16,7 +19,10 @@ export default function Home() {
       <Categories />
       <CarouselFlow />
       <CarouselGrid />
+      <CollectionGrid/>
       <ProductsCards categoryProps={category}/>
+      <Comments />
+      <Banner />
       <Footer />
     </main>
   );

@@ -55,7 +55,7 @@ export default function ProductsCards(categoryProps: any): any {
   const renderProductsTag = () => {
 
     return (
-      <div className="py-4 mx-auto mt-6 mb-6 flex flex-col items-center justify-center text-gray-200">
+      <div className="py-4 mx-auto flex flex-col items-center justify-center">
         <div id="products-list" className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 gap-12">
           {categoryProps.categoryProps != null ? (
             displayedProducts
