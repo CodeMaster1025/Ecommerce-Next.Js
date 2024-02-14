@@ -10,11 +10,11 @@ export default function CollectionGrid() {
                     </span>
                 </header>
 
-                <ul className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
+                <ul className="mt-8 grid grid-cols-5 gap-4 lg:grid-cols-4">
                     <li>
                         <a href="#" className="group relative block">
                             <img
-                                src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                src="https://source.unsplash.com/featured/300x300?dress"
                                 alt=""
                                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
                             />
@@ -28,7 +28,7 @@ export default function CollectionGrid() {
                     <li>
                         <a href="#" className="group relative block">
                             <img
-                                src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                src="https://source.unsplash.com/featured/300x300?t-shirt"
                                 alt=""
                                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
                             />
@@ -42,7 +42,7 @@ export default function CollectionGrid() {
                     <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
                         <a href="#" className="group relative block">
                             <img
-                                src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                                src="https://source.unsplash.com/featured/300x300?pants"
                                 alt=""
                                 className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
                             />
@@ -52,12 +52,38 @@ export default function CollectionGrid() {
                             </div>
                         </a>
                     </li>
+                    <li>
+                        <a href="#" className="group relative block">
+                            <img
+                                src="https://source.unsplash.com/featured/300x300?black-dress"
+                                alt=""
+                                className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
+                            />
+
+                            <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                                <h3 className="text-xl font-medium text-white"></h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="group relative block">
+                            <img
+                                src="https://source.unsplash.com/featured/300x300?t-shirt-black"
+                                alt=""
+                                className="aspect-square w-full object-cover transition duration-500 group-hover:opacity-90"
+                            />
+                            
+                            <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                                <h3 className="text-xl font-medium text-white"></h3>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
                 <span className="flex items-center mt-6">
-                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
-                        <span id="new-collection" className="shrink-0 px-6 py-4 text-black text-xl md:text-4xl">Coleções</span>
-                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
-                    </span>
+                    <span className="h-px flex-1 bg-black bg-opacity-50"></span>
+                    <span id="new-collection" className="shrink-0 px-6 py-4 text-black text-xl md:text-4xl">Coleções</span>
+                    <span className="h-px flex-1 bg-black bg-opacity-50"></span>
+                </span>
             </div>
         </section>
     )
