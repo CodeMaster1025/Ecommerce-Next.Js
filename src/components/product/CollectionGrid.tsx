@@ -1,18 +1,16 @@
 export default function CollectionGrid() {
     return (
         <section>
-            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <div className="mx-auto max-w-screen-xl mt-6 px-4 sm:px-6 lg:px-8">
                 <header className="text-center">
-                    <span className="flex items-center">
-                        <span className="h-px flex-1 bg-black"></span>
+                    <span className="flex items-center py-2">
+                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
                         <span id="new-collection" className="shrink-0 px-6 text-black text-xl md:text-4xl">Novidades</span>
-                        <span className="h-px flex-1 bg-black"></span>
+                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
                     </span>
-                    <p className="mx-auto mt-4 max-w-md text-gray-500">
-                    </p>
                 </header>
 
-                <ul className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
+                <ul className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
                     <li>
                         <a href="#" className="group relative block">
                             <img
@@ -55,10 +53,10 @@ export default function CollectionGrid() {
                         </a>
                     </li>
                 </ul>
-                <span className="flex items-center mt-12">
-                        <span className="h-px flex-1 bg-black"></span>
-                        <span id="new-collection" className="shrink-0 px-6 text-black text-xl md:text-4xl">Coleções</span>
-                        <span className="h-px flex-1 bg-black"></span>
+                <span className="flex items-center mt-6">
+                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
+                        <span id="new-collection" className="shrink-0 px-6 py-4 text-black text-xl md:text-4xl">Coleções</span>
+                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
                     </span>
             </div>
         </section>

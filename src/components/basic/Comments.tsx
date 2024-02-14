@@ -1,16 +1,16 @@
 export default function Comments() {
     return (
         <section className="bg-white">
-            <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+            <div className="mx-auto max-w-screen-xl py-4 px-4 sm:px-6 lg:px-8">
                 <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                    <span className="flex items-center mb-12">
+                    <span className="flex items-center">
                         <span className="h-px flex-1 bg-black"></span>
                         <span id="new-collection" className="shrink-0 px-6 text-black text-xl md:text-4xl">Avaliações</span>
                         <span className="h-px flex-1 bg-black"></span>
                     </span>
                 </h2>
 
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+                <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
                     <blockquote className="rounded-lg  p-6 sm:p-8">
                         <div className="flex items-center gap-4">
                             <img
