@@ -327,6 +327,31 @@ export default function useProducts() {
     const [products, setProducts] = useState<Product[]>(productsList);
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
     const [categoria, setCategoria] = useState("");
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const response = await fetch('http://localhost:8093/products', {
+    //           method: 'GET',
+    //           headers: {
+    //             'Content-Type': 'application/json',
+    //           },
+    //         });
+    
+    //         if (!response.ok) {
+    //           throw new Error(`HTTP error! Status: ${response.status}`);
+    //         }
+    
+    //         const data = await response.json();
+    //         setProducts(data)
+    //       } catch (error) {
+    //         console.error('Error fetching products: ', error);
+    //       }
+    //     };
+    
+    //     fetchData();
+    //   }, []);
+    
   
     const onSetCategoryClick = useCallback(
       (categoryValue: string) => {

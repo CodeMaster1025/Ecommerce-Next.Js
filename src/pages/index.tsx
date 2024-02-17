@@ -14,7 +14,7 @@ export default function Home() {
   const { category } = router.query;
   
   return (
-    <main className="">
+    <section className="">
       <Navbar />
       <Categories />
       <CarouselFlow />
@@ -24,6 +24,6 @@ export default function Home() {
       <Comments />
       <Banner />
       <Footer />
-    </main>
+    </section>
   );
 }

@@ -24,12 +24,12 @@ export default function ProductsCards(categoryProps: any): any {
 
     return (
       <div id="products-cards" key={id} className="relative flex flex-col items-center justify-center p-2 text-center hover:scale-105">
-        <img src={photoLink} className="p-1 rounded-lg" alt={name} />
+        <img src={photoLink} className="w-5/6 md:w-full p-1 rounded-lg" alt={name} />
         <button
           onClick={() => {
             addToCart(product);
           }}
-          className="absolute bottom-1 right-3 mb-2 bg-orange-200 bg-opacity-25 text-black px-1 py-1 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
+          className="absolute bottom-1 right-5 md:right-0 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
         >
           <svg width="20px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -45,7 +45,7 @@ export default function ProductsCards(categoryProps: any): any {
         <p className="text-xs text-gray-500 line-through">R${price}</p>
         <p className="text-md">R${discountedPrice}</p>
         <div className="flex justify-center items-center gap-1 mt-1">
-          <div className="text-3xl text-yellow-400">{Array(Math.min(5, Math.max(1, Math.floor(stars)))).fill('★').join('')}</div>
+          <div className="md:text-3xl text-yellow-400">{Array(Math.min(5, Math.max(1, Math.floor(stars)))).fill('★').join('')}</div>
           <span className="text-xs"> ({Math.floor(stars)})</span>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default function ProductsCards(categoryProps: any): any {
 
     return (
       <div className="py-4 mx-auto flex flex-col items-center justify-center">
-        <div id="products-list" className="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 gap-12">
+        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
           {categoryProps.categoryProps != null ? (
             displayedProducts
               .filter((product) => product.categoryEnums === categoryProps.categoryProps)
