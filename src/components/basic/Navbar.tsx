@@ -38,7 +38,7 @@ export default function Navbar(): JSX.Element {
                 </a>
                 <div className="flex items-center justify-center md:order-2">
                     <Link id="" href="/cart" className="block mr-2 mt-1 md:block">
-                        <button className="bg-orange-200 bg-opacity-25 md:shadow-md rounded-full justify-center items-center">
+                        <button className="bg-orange-200 bg-opacity-25 md:shadow-md rounded-full justify-center items-center hover:bg-orange-400">
                             <span className="relative inline-block md:p-2 md:scale-125">
                                 <svg
                                     width="20px"
