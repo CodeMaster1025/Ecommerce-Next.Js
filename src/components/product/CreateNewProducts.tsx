@@ -25,7 +25,7 @@ export default function CreateNewProduct(): JSX.Element {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8093/products/postProduct', {
+      const response = await fetch('http://localhost:8093/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export default function CreateNewProduct(): JSX.Element {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full mx-auto mb-8 mt-8 p-4 overflow-y-scroll text-gray-900 bg-yellow-200 bg-opacity-0 rounded-md">
+    <div className="flex flex-col justify-center items-center w-full h-full mx-auto mb-8 mt-8 p-4 overflow-y-scroll text-gray-900 bg-opacity-0 rounded-md">
       <h2 className="text-2xl font-bold mb-4">CRIAR NOVO PRODUTO</h2>
       <form onSubmit={handleSubmit} className='grid grid-cols-2 gap-8'>
         <div className="mb-4">

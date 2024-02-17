@@ -27,7 +27,7 @@ export default function CartComponent() {
   }, []);
 
   return (
-    <div className="bg-opacity-10 h-full mb-0 py-8 text-black">
+    <div className="h-full mb-0 py-8 text-black">
       <div className="container mx-auto px-4">
         <h1 id="carrinho" className="text-2xl font-semibold mb-4"></h1>
         <div className="flex flex-col md:flex-row gap-4">

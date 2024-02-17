@@ -4,13 +4,13 @@ import Banner from "../components/basic/Banner";
 import CreateNewProduct from "../components/product/CreateNewProducts";
 
 
-export default function novoProduto() {
+export default function newProduct() {
   return (
-    <main className="">
+    <section className="">
         <Navbar />
         <CreateNewProduct />
         <Banner />
         <Footer />
-    </main>
+    </section>
   );
 }
