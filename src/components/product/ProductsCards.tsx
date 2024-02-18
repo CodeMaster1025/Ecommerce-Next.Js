@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import useProductsCards from '@/hooks/useProductsCards';
 import useCart from '@/hooks/useCart';
+import Link from 'next/link';
 
 type Product = {
   id: number;
@@ -24,7 +25,9 @@ export default function ProductsCards(categoryProps: any): any {
 
     return (
       <div id="products-cards" key={id} className="relative flex flex-col items-center justify-center p-2 text-center hover:scale-105">
+        <Link href={'/productDescription?id=' + product.id}>
         <img src={photoLink} className="w-5/6 md:w-full p-1 rounded-lg" alt={name} />
+        </Link>
         <button
           onClick={() => {
             addToCart(product);
@@ -56,7 +59,7 @@ export default function ProductsCards(categoryProps: any): any {
 
     return (
       <div className="py-4 mx-auto flex flex-col items-center justify-center">
-        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
+        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 sm:gap-16 lg:grid-cols-4">
           {categoryProps.categoryProps != null ? (
             displayedProducts
               .filter((product) => product.categoryEnums === categoryProps.categoryProps)

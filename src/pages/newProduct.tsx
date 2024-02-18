@@ -4,7 +4,7 @@ import Banner from "../components/basic/Banner";
 import CreateNewProduct from "../components/product/CreateNewProducts";
 
 
-export default function newProduct() {
+export default function NewProductPage() {
   return (
     <section className="">
         <Navbar />
