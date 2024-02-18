@@ -16,7 +16,7 @@ const productsList = [
     {
         "id": 1,
         "name": "Vestido Floral",
-        "description": "Descrição do vestido floral",
+        "description": "Vestido floral elegante, perfeito para diversas ocasiões. Confeccionado com tecido leve e confortável, proporcionando charme e estilo. Aproveite a promoção com desconto de R$20!",
         "price": 89.99,
         "quantityInStock": 100,
         "categoryEnums": "VESTIDOS",
@@ -27,7 +27,7 @@ const productsList = [
     {
         "id": 2,
         "name": "Saia Midi",
-        "description": "Descrição da saia midi",
+        "description": "Saia midi moderna e versátil, ideal para compor looks femininos. Feita com tecido de alta qualidade para garantir conforto e estilo. Aproveite o desconto de R$15!",
         "price": 59.99,
         "quantityInStock": 100,
         "categoryEnums": "SAIAS",
@@ -38,7 +38,7 @@ const productsList = [
     {
         "id": 3,
         "name": "Regata",
-        "description": "Descrição da regata",
+        "description": "Regata fitness confortável, ideal para atividades físicas. Com design moderno e tecido respirável, proporciona liberdade de movimento. Aproveite o desconto de R$15!",
         "price": 59.99,
         "quantityInStock": 100,
         "categoryEnums": "FITNESS",
@@ -49,7 +49,7 @@ const productsList = [
     {
         "id": 4,
         "name": "Sapato",
-        "description": "Descrição do sapato",
+        "description": "Sapato elegante para diversas ocasiões. Confortável e estiloso, é a escolha perfeita para um look sofisticado. Aproveite o desconto de R$15!",
         "price": 59.99,
         "quantityInStock": 100,
         "categoryEnums": "SAPATOS",
@@ -60,7 +60,7 @@ const productsList = [
     {
         "id": 5,
         "name": "Blusa Elegante",
-        "description": "Descrição da blusa elegante",
+        "description": "Blusa elegante para diversas ocasiões. Com um design moderno e sofisticado, é a peça ideal para um visual refinado. Aproveite o desconto de R$10!",
         "price": 39.99,
         "quantityInStock": 80,
         "categoryEnums": "BLUSAS",
@@ -71,7 +71,7 @@ const productsList = [
     {
         "id": 6,
         "name": "Jeans Skinny",
-        "description": "Descrição do jeans skinny",
+        "description": "Calça jeans skinny para um look moderno e estiloso. Confeccionada com tecido de alta qualidade, proporciona conforto e durabilidade. Aproveite o desconto de R$10!",
         "price": 69.99,
         "quantityInStock": 40,
         "categoryEnums": "CALCAS",
@@ -82,7 +82,7 @@ const productsList = [
     {
         "id": 8,
         "name": "Casaco de Inverno",
-        "description": "Descrição do casaco de inverno",
+        "description": "Casaco de inverno elegante e quente. Perfeito para os dias mais frios, com um design moderno que complementa qualquer visual. Aproveite o desconto de R$20!",
         "price": 149.99,
         "quantityInStock": 10,
         "categoryEnums": "CASACOS",
@@ -93,7 +93,7 @@ const productsList = [
     {
         "id": 10,
         "name": "Camiseta Listrada",
-        "description": "Descrição da camiseta listrada",
+        "description": "Camiseta listrada casual e confortável. Com um design moderno e descontraído, é a opção perfeita para o dia a dia. Aproveite o desconto de R$10!",
         "price": 29.99,
         "quantityInStock": 60,
         "categoryEnums": "CAMISETAS",
@@ -104,7 +104,7 @@ const productsList = [
     {
         "id": 11,
         "name": "Relógio Elegante",
-        "description": "Descrição do relógio elegante",
+        "description": "Relógio elegante para complementar seu estilo. Design sofisticado e funcionalidades modernas. Aproveite o desconto de R$25!",
         "price": 119.99,
         "quantityInStock": 30,
         "categoryEnums": "ACESSORIOS",
@@ -115,7 +115,7 @@ const productsList = [
     {
         "id": 12,
         "name": "Shorts Esportivo",
-        "description": "Descrição do shorts esportivo",
+        "description": "Shorts esportivo confortável e estiloso. Ideal para práticas esportivas ou looks descontraídos. Aproveite o desconto de R$10!",
         "price": 49.99,
         "quantityInStock": 70,
         "categoryEnums": "FITNESS",
@@ -126,7 +126,7 @@ const productsList = [
     {
         "id": 13,
         "name": "Tênis Casual",
-        "description": "Descrição do tênis casual",
+        "description": "Tênis casual moderno e confortável. Ideal para o dia a dia, proporcionando estilo e praticidade. Aproveite o desconto de R$15!",
         "price": 89.99,
         "quantityInStock": 50,
         "categoryEnums": "SAPATOS",
@@ -137,7 +137,7 @@ const productsList = [
     {
         "id": 14,
         "name": "Colar de Pérolas",
-        "description": "Descrição do colar de pérolas",
+        "description": "Colar de pérolas elegante e sofisticado. Um acessório que adiciona charme e refinamento ao seu visual. Aproveite o desconto de R$20!",
         "price": 69.99,
         "quantityInStock": 25,
         "categoryEnums": "ACESSORIOS",
@@ -148,7 +148,7 @@ const productsList = [
     {
         "id": 15,
         "name": "Boné Esportivo",
-        "description": "Descrição do boné esportivo",
+        "description": "Boné esportivo estiloso e confortável. Proteção contra o sol com muito estilo. Aproveite o desconto de R$10!",
         "price": 34.99,
         "quantityInStock": 40,
         "categoryEnums": "ACESSORIOS",
@@ -159,7 +159,7 @@ const productsList = [
     {
         "id": 16,
         "name": "Mala de Viagem",
-        "description": "Descrição da mala de viagem",
+        "description": "Mala de viagem espaçosa e resistente. Perfeita para suas aventuras, com design moderno e funcional. Aproveite o desconto de R$15!",
         "price": 99.99,
         "quantityInStock": 20,
         "categoryEnums": "ACESSORIOS",
@@ -170,7 +170,7 @@ const productsList = [
     {
         "id": 17,
         "name": "Vestido de Festa",
-        "description": "Descrição do vestido de festa",
+        "description": "Vestido de festa elegante e sofisticado. Ideal para ocasiões especiais, garantindo um visual deslumbrante. Aproveite o desconto de R$25!",
         "price": 129.99,
         "quantityInStock": 30,
         "categoryEnums": "VESTIDOS",
@@ -181,7 +181,7 @@ const productsList = [
     {
         "id": 18,
         "name": "Bermuda Cargo",
-        "description": "Descrição da bermuda cargo",
+        "description": "Bermuda cargo versátil e confortável. Perfeita para o dia a dia, com bolsos práticos e design moderno. Aproveite o desconto de R$10!",
         "price": 49.99,
         "quantityInStock": 60,
         "categoryEnums": "CALCAS",
@@ -192,7 +192,7 @@ const productsList = [
     {
         "id": 19,
         "name": "Camisa Social",
-        "description": "Descrição da camisa social",
+        "description": "Camisa social clássica e elegante. Perfeita para ocasiões formais, garantindo um visual refinado. Aproveite o desconto de R$15!",
         "price": 79.99,
         "quantityInStock": 40,
         "categoryEnums": "CAMISAS",
@@ -203,7 +203,7 @@ const productsList = [
     {
         "id": 20,
         "name": "Chapéu de Sol",
-        "description": "Descrição do chapéu de sol",
+        "description": "Chapéu de sol estiloso e funcional. Proteção contra os raios solares com muito charme. Aproveite o desconto de R$10!",
         "price": 29.99,
         "quantityInStock": 80,
         "categoryEnums": "ACESSORIOS",
@@ -214,7 +214,7 @@ const productsList = [
     {
         "id": 21,
         "name": "Jaqueta Jeans",
-        "description": "Descrição da jaqueta jeans",
+        "description": "Jaqueta jeans moderna e versátil. Com um design atemporal, é a peça ideal para complementar seu visual. Aproveite o desconto de R$15!",
         "price": 89.99,
         "quantityInStock": 35,
         "categoryEnums": "CASACOS",
@@ -225,7 +225,7 @@ const productsList = [
     {
         "id": 22,
         "name": "Sapato Social",
-        "description": "Descrição do sapato social",
+        "description": "Sapato social elegante e sofisticado. Ideal para ocasiões formais, garantindo conforto e estilo. Aproveite o desconto de R$20!",
         "price": 99.99,
         "quantityInStock": 25,
         "categoryEnums": "SAPATOS",
@@ -236,7 +236,7 @@ const productsList = [
     {
         "id": 23,
         "name": "Saia Longa",
-        "description": "Descrição da saia longa",
+        "description": "Saia longa versátil e elegante. Perfeita para criar looks femininos e modernos. Aproveite o desconto de R$10!",
         "price": 69.99,
         "quantityInStock": 45,
         "categoryEnums": "SAIAS",
@@ -247,7 +247,7 @@ const productsList = [
     {
         "id": 24,
         "name": "Pulseira de Prata",
-        "description": "Descrição da pulseira de prata",
+        "description": "Pulseira de prata elegante e refinada. Um acessório que adiciona sofisticação ao seu visual. Aproveite o desconto de R$10!",
         "price": 39.99,
         "quantityInStock": 50,
         "categoryEnums": "ACESSORIOS",
@@ -258,7 +258,7 @@ const productsList = [
     {
         "id": 25,
         "name": "Calça Legging",
-        "description": "Descrição da calça legging",
+        "description": "Calça legging confortável e versátil. Ideal para atividades físicas ou looks casuais. Aproveite o desconto de R$10!",
         "price": 39.99,
         "quantityInStock": 70,
         "categoryEnums": "FITNESS",
@@ -269,7 +269,7 @@ const productsList = [
     {
         "id": 26,
         "name": "Moletom Casual",
-        "description": "Descrição do moletom casual",
+        "description": "Moletom casual confortável e estiloso. Perfeito para os dias mais frios, com um design moderno. Aproveite o desconto de R$15!",
         "price": 79.99,
         "quantityInStock": 30,
         "categoryEnums": "CASACOS",
@@ -280,7 +280,7 @@ const productsList = [
     {
         "id": 27,
         "name": "Chinelo Slide",
-        "description": "Descrição do chinelo slide",
+        "description": "Chinelo slide confortável e moderno. Ideal para momentos descontraídos. Aproveite o desconto de R$10!",
         "price": 24.99,
         "quantityInStock": 90,
         "categoryEnums": "SAPATOS",
@@ -291,7 +291,7 @@ const productsList = [
     {
         "id": 29,
         "name": "Boné Snapback",
-        "description": "Descrição do boné snapback",
+        "description": "Boné snapback estiloso e versátil. Um acessório moderno para complementar seu visual. Aproveite o desconto de R$10!",
         "price": 29.99,
         "quantityInStock": 40,
         "categoryEnums": "ACESSORIOS",
@@ -302,7 +302,7 @@ const productsList = [
     {
         "id": 30,
         "name": "Blusa de Tricô",
-        "description": "Descrição da blusa de tricô",
+        "description": "Blusa de tricô confortável e elegante. Ideal para dias mais frescos, com um design clássico. Aproveite o desconto de R$15!",
         "price": 69.99,
         "quantityInStock": 25,
         "categoryEnums": "BLUSAS",
@@ -313,7 +313,7 @@ const productsList = [
     {
         "id": 31,
         "name": "Calça Cargo",
-        "description": "Descrição da calça cargo",
+        "description": "Calça cargo versátil e moderna, perfeita para compor looks casuais e confortáveis. Possui bolsos espaçosos e um ajuste confortável. Aproveite o desconto de R$10!",
         "price": 59.99,
         "quantityInStock": 35,
         "categoryEnums": "CALCAS",
@@ -321,7 +321,8 @@ const productsList = [
         "stars": 3,
         "offPrice": 10
     }
-]
+];
+
 
 export default function useProducts() {
     const [products, setProducts] = useState<Product[]>(productsList);
