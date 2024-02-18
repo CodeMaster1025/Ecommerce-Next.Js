@@ -88,7 +88,7 @@ export default function ProductDatails(idProps :any): any {
                 <button className="border-2 border-gray-300 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>
               </div>
               <div className="flex ml-6 items-center">
-                <span className="mr-3">Size</span>
+                <span className="mr-3">Tamanhos:</span>
                 <div className="relative">
                   <select className="bg-orange-100 rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-yellow-500 text-base pl-3 pr-10">
                     <option>SM</option>
