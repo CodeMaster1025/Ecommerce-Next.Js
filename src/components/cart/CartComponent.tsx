@@ -58,7 +58,7 @@ export default function CartComponent() {
                 <span className="font-semibold">Total</span>
                 {(total).toFixed(2)}
               </div>
-              <button className="bg-yellow-400 bg-opacity-50 text-black py-2 px-4 rounded-lg mt-4 w-full">
+              <button className="bg-orange-400 bg-opacity-50 hover:bg-orange-200 text-black py-2 px-4 rounded-lg mt-4 w-full">
                 COMPRAR
               </button>
             </div>

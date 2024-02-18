@@ -327,6 +327,8 @@ export default function useProducts() {
     const [products, setProducts] = useState<Product[]>(productsList);
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
     const [categoria, setCategoria] = useState("");
+    const [productId, setProductsId] = useState<number>(1);
+
 
     // useEffect(() => {
     //     const fetchData = async () => {
@@ -372,5 +374,5 @@ export default function useProducts() {
 
     const displayedProducts = categoria ? filteredProducts : products;
  
-    return { displayedProducts, onSetCategoryClick, categoria };
+    return { displayedProducts, onSetCategoryClick,  categoria };
   }
