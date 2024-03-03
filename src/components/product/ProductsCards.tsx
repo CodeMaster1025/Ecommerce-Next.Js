@@ -24,15 +24,15 @@ export default function ProductsCards(categoryProps: any): any {
     const discountedPrice = (price - (price * offPrice) / 100).toFixed(2);
 
     return (
-      <div id="products-cards" key={id} className="relative flex flex-col items-center justify-center p-2 text-center hover:scale-105">
+      <div id="products-cards" key={id} className="relative p-4 md:px-8 flex flex-col items-center justify-center text-center hover:scale-105">
         <Link href={'/productDescription?id=' + product.id}>
-        <img src={photoLink} className="w-full rounded-xl" alt={name} />
+        <img src={photoLink} className="w-36 md:w-64 rounded-xl" alt={name} />
         </Link>
         <button
           onClick={() => {
             addToCart(product);
           }}
-          className="absolute bottom-1 right-1 md:right-0 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
+          className="absolute bottom-2 right-1 md:right-2 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
         >
           <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -58,8 +58,8 @@ export default function ProductsCards(categoryProps: any): any {
   const renderProductsTag = () => {
 
     return (
-      <div className="py-4 mx-auto flex flex-col items-center justify-center">
-        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 sm:gap-16 lg:grid-cols-4">
+      <div className="mx-auto mt-8 mb-8 md:mt-16 flex flex-col items-center justify-center md:w-5/6">
+        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 gap-8 sm:gap-16 lg:grid-cols-4">
           {categoryProps.categoryProps != null
             ? displayedProducts
                 .filter((product) => product.categoryEnums === categoryProps.categoryProps)

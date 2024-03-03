@@ -1,16 +1,8 @@
 export default function CollectionGrid() {
     return (
-        <section>
-            <div className="mx-auto max-w-screen-xl mt-6 px-4 sm:px-6 lg:px-8">
-                <header className="text-center">
-                    <span className="flex items-center py-2">
-                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
-                        <span id="new-collection" className="shrink-0 px-6 text-black text-xl md:text-4xl">Novidades</span>
-                        <span className="h-px flex-1 bg-black bg-opacity-50"></span>
-                    </span>
-                </header>
-
-                <ul className="mt-8 grid grid-cols-5 gap-4 lg:grid-cols-4">
+        <section className="hidden md:flex">
+            <div className="mx-auto max-w-screen-xl mt-8 md:mt-16">
+                <ul className="mt-8 grid grid-cols-5 gap-8 lg:grid-cols-4">
                     <li>
                         <a href="#" className="group relative block">
                             <img
@@ -79,11 +71,6 @@ export default function CollectionGrid() {
                         </a>
                     </li>
                 </ul>
-                <span className="flex items-center mt-6">
-                    <span className="h-px flex-1 bg-black bg-opacity-50"></span>
-                    <span id="new-collection" className="shrink-0 px-6 py-4 text-black text-xl md:text-4xl">Coleções</span>
-                    <span className="h-px flex-1 bg-black bg-opacity-50"></span>
-                </span>
             </div>
         </section>
     )

@@ -29,7 +29,7 @@ export default function CartComponent() {
   return (
     <div className="h-full mb-0 py-8 text-black">
       <div className="container mx-auto px-4">
-        <h1 id="carrinho" className="text-2xl font-semibold mb-4"></h1>
+        <h1 id="carrinho" className="text-2xl font-semibold mb-4">Carrinho</h1>
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-3/4">
             <div className="bg-gray-300 bg-opacity-10 rounded-lg shadow-md p-4 mb-6">
@@ -46,17 +46,17 @@ export default function CartComponent() {
               </table>
             </div>
           </div>
-          <div className="md:w-1/4 ">
+          <div className="md:w-1/4">
             <div className="bg-gray-400 bg-opacity-5 rounded-lg shadow-md p-6">
               <h2 className="text-lg font-semibold mb-4">Resumo</h2>
               <div className="flex justify-between mb-2">
                 <span>Frete</span>
                 <span>$0.00</span>
               </div>
-              <hr className="my-2 border-black"></hr>
+              <hr className="my-2 border-black" />
               <div className="flex justify-between mb-2">
                 <span className="font-semibold">Total</span>
-                {(total).toFixed(2)}
+                <span>{total.toFixed(2)}</span>
               </div>
               <button className="bg-orange-400 bg-opacity-50 hover:bg-orange-200 text-black py-2 px-4 rounded-lg mt-4 w-full">
                 COMPRAR

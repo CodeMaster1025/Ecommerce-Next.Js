@@ -1,6 +1,6 @@
 import useCart from "@/hooks/useCart";
 import useProductCartQuantities from "@/hooks/useProductCartQuantities";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 type Product = {
   id: number;
@@ -16,19 +16,18 @@ type Product = {
 
 interface Props {
   products: Product[];
-  totalPriceFunction: any;
+  totalPriceFunction: (total: number) => void;
 }
-export default function PricePerProduct({ products, totalPriceFunction }: Props) {
 
+export default function PricePerProduct({ products, totalPriceFunction }: Props) {
   const processedProductIds = new Set<number>();
-  const { quantities, handleDecreaseQuantity, handleIncreaseQuantity } = useProductCartQuantities(products, totalPriceFunction)
-  const { removeProductById, cart} = useCart();
+  const { quantities, handleDecreaseQuantity, handleIncreaseQuantity } = useProductCartQuantities(products, totalPriceFunction);
+  const { removeProductById, cart } = useCart();
 
   useEffect(() => {
     const total = cart.reduce((acc, product) => acc + (quantities[product.id] || 1) * product.price, 0);
     totalPriceFunction(total);
   }, [cart, quantities, totalPriceFunction]);
-
 
   if (!Array.isArray(cart)) {
     return null;
@@ -41,39 +40,41 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
           return null;
         }
 
-        processedProductIds.add(product.id)
+        processedProductIds.add(product.id);
+
+        const { id, name, price } = product;
+        const quantity = quantities[id] || 1;
+        const totalPrice = (quantity * price).toFixed(2);
 
         return (
-          <tr className="text-xs md:text-base" key={product.id}>
-            <td  className="py-2">
+          <tr className="text-xs md:text-base" key={id}>
+            <td className="py-2">
               <div className="flex items-center">
-                <img
-                  className="w-6 md:w-16 mr-4"
-                  src={product.photoLink}
-                  alt={product.name}
-                />
-                <span className="">{product.name}</span>
+                <img className="w-6 md:w-16 mr-4" src={product.photoLink} alt={name} />
+                <span className="">{name}</span>
               </div>
             </td>
-            <td className="py-2">${product.price}</td>
+            <td className="py-2">${price}</td>
             <td className="py-2">
               <div className="flex items-center">
                 <button
-                  onClick={() => handleDecreaseQuantity(product.id)}
+                  onClick={() => handleDecreaseQuantity(id)}
                   className="border border-black border-opacity-10 hover:scale-105 rounded-md p-0.5 md:p-1"
                 >
                   -
                 </button>
-                <span className="text-center text-sm md:text-xl w-6 p-0">{quantities[product.id] || 1}</span>
+                <span className="text-center text-sm md:text-xl w-6 p-0">{quantity}</span>
                 <button
-                  onClick={() => handleIncreaseQuantity(product.id)}
+                  onClick={() => handleIncreaseQuantity(id)}
                   className="border border-black border-opacity-10 hover:scale-105 rounded-md p-0.5 md:p-1"
                 >
                   +
                 </button>
-                <button onClick={() => {removeProductById(product.id) }} className="opacity-40 transition hover:text-red-800 hover:scale-105 rounded-md p-1 md:p-2">
+                <button
+                  onClick={() => removeProductById(id)}
+                  className="opacity-40 transition hover:text-red-800 hover:scale-105 rounded-md p-1 md:p-2"
+                >
                   <span className="sr-only">Remove item</span>
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -91,9 +92,7 @@ export default function PricePerProduct({ products, totalPriceFunction }: Props)
                 </button>
               </div>
             </td>
-            <td className="">
-              ${((quantities[product.id] || 1) * product.price).toFixed(2)}
-            </td>
+            <td className="">${totalPrice}</td>
           </tr>
         );
       })}

@@ -1,24 +1,12 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import useCart from '@/hooks/useCart';
 import useProductsDescription from '@/hooks/useProductDescription';
-
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  quantityInStock: number;
-  categoryEnums: string;
-  photoLink: string;
-  offPrice: number;
-  stars: number;
-};
 
 export default function ProductDatails(idProps :any): any {
 
   const { addToCart } = useCart();
   const [props, setProps] = useState<number>(0);
-  const {productsDescription} = useProductsDescription(props);
+  const { productsDescription } = useProductsDescription(props);
 
 
   useEffect(() => {
