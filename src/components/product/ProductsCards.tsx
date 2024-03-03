@@ -60,15 +60,15 @@ export default function ProductsCards(categoryProps: any): any {
     return (
       <div className="py-4 mx-auto flex flex-col items-center justify-center">
         <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 sm:gap-16 lg:grid-cols-4">
-          {categoryProps.categoryProps != null ? (
-            displayedProducts
-              .filter((product) => product.categoryEnums === categoryProps.categoryProps)
-              .map((product: Product) => (
+          {categoryProps.categoryProps != null
+            ? displayedProducts
+                .filter((product) => product.categoryEnums === categoryProps.categoryProps)
+                .map((product: Product) => (
+                  <div key={product.id}>{createProductTags(product)}</div>
+                ))
+            : displayedProducts.map((product: Product) => (
                 <div key={product.id}>{createProductTags(product)}</div>
-              ))
-          ) : displayedProducts.map((product: Product) => (
-            <div key={product.id}>{createProductTags(product)}</div>
-          ))}
+              ))}
         </div>
       </div>
     );
