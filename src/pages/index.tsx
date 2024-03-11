@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Footer from "../components/basic/Footer";
+import Footer from "../components/ui/Footer";
 import Navbar from "../components/basic/Navbar";
 import ProductsCards from "../components/product/ProductsCards";
 import CarouselFlow from "@/components/basic/CarouselFlow";

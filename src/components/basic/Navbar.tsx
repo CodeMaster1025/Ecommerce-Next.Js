@@ -1,5 +1,5 @@
 import Script from "next/script";
-import Logo from "./Logo";
+import Logo from "../ui/Logo";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 

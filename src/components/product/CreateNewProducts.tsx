@@ -39,8 +39,6 @@ export default function CreateNewProduct(): JSX.Element {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-
-      // Handle success, e.g., redirect or show a success message
       alert('Product created successfully!');
     } catch (error) {
       alert('Error creating product: ' + error);

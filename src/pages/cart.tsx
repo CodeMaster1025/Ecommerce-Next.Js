@@ -1,5 +1,5 @@
 import CartComponent from "../components/cart/CartComponent";
-import Footer from "../components/basic/Footer";
+import Footer from "../components/ui/Footer";
 import Navbar from "../components/basic/Navbar";
 import Banner from "../components/basic/Banner";
 import Comments from "@/components/basic/Comments";
