@@ -2,19 +2,8 @@ import { useEffect, useState } from "react";
 import PricePerProduct from "./PricePerProduct";
 import useCart from "@/hooks/useCart";
 
-type Product = {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  quantityInStock: number;
-  categoryEnums: string;
-  photoLink: string;
-  offPrice: number;
-  stars: number;
-};
 
-export default function CartComponent() {
+const CartComponent = () => {
   const [total, setTotal] = useState<number>(1);
   const { setCart, cart } = useCart();
 
@@ -68,3 +57,4 @@ export default function CartComponent() {
     </div>
   );
 }
+export default CartComponent;

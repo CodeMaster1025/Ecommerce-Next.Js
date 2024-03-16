@@ -6,6 +6,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
@@ -18,7 +19,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;;
+    --foreground-rgb: 255, 255, 255;
+    ;
     --background-start-rgb: 255, 255, 255;
     --background-end-rgb: 255, 255, 255;
   }
@@ -26,12 +28,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -45,22 +44,28 @@ body {
   * {
     appearance: none;
   }
+
   body {
     @apply bg-orange-50;
     font-family: "Playfair Display", serif;
   }
+
   #products-cards {
     @apply text-black bg-orange-50 bg-opacity-5 rounded-xl;
   }
+
   #nav-bar li {
     @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg hover:underline
   }
+
   #categories-id li {
     @apply hover:underline
   }
+
   #footer {
     @apply text-gray-800;
   }
+
   #footer li {
     @apply text-gray-700;
   }
@@ -71,8 +76,5 @@ body {
 
   #banner {
     font-family: 'Dancing Script', 'Helvetica Neue', cursive;
-  }
-
-  #carrinho {
   }
 }
