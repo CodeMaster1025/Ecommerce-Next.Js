@@ -1,6 +1,9 @@
 import useProductsCards from '@/hooks/useProductsCards';
 import useCart from '@/hooks/useCart';
 import Link from 'next/link';
+import { useState } from 'react';
+import { ProgressSpinner } from 'primereact/progressspinner';
+
 
 type Product = {
   id: number;
@@ -15,12 +18,19 @@ type Product = {
 };
 
 type CategoryProps = {
-  categoryProps: string |string[] | undefined;
+  categoryProps: string | string[] | undefined;
 };
 
-const ProductsCards = ({categoryProps}: CategoryProps): JSX.Element => {
+const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
   const { displayedProducts } = useProductsCards();
   const { addToCart } = useCart();
+  const [loading, setLoading] = useState(true);
+  const handleImageLoad = () => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  };
+
 
   const createProductTags = (product: Product) => {
     const { id, name, price, photoLink, offPrice, stars } = product;
@@ -29,7 +39,15 @@ const ProductsCards = ({categoryProps}: CategoryProps): JSX.Element => {
     return (
       <div id="products-cards" key={id} className="relative p-4 md:px-8 flex flex-col items-center justify-center text-center hover:scale-105">
         <Link href={'/product-description?id=' + product.id}>
-        <img src={photoLink} className="w-36 md:w-64 rounded-xl" alt={name} />
+          <div>
+            {loading && <ProgressSpinner style={{ width: '25px', height: '25px' }} strokeWidth="4" fill="transparent" animationDuration=".5s" />}
+            <img
+              onLoad={handleImageLoad}
+              src={photoLink}
+              className={`w-36 md:w-64 rounded-xl ${loading ? 'hidden' : 'block'}`}
+              alt={name}
+            />
+          </div>
         </Link>
         <button
           onClick={() => {
@@ -68,13 +86,13 @@ const ProductsCards = ({categoryProps}: CategoryProps): JSX.Element => {
         <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 gap-8 sm:gap-16 lg:grid-cols-4">
           {categoryProps != null
             ? displayedProducts
-                .filter((product) => product.categoryEnums === categoryProps)
-                .map((product: Product) => (
-                  <div key={product.id}>{createProductTags(product)}</div>
-                ))
-            : displayedProducts.map((product: Product) => (
+              .filter((product) => product.categoryEnums === categoryProps)
+              .map((product: Product) => (
                 <div key={product.id}>{createProductTags(product)}</div>
-              ))}
+              ))
+            : displayedProducts.map((product: Product) => (
+              <div key={product.id}>{createProductTags(product)}</div>
+            ))}
         </div>
       </div>
     );

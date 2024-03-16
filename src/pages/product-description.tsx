@@ -16,7 +16,7 @@ export default function ProductDescriptionPage() {
   return (
     <section className="">
         <Navbar />
-        <ProductDatails idProps={id}/>
+        <ProductDatails id={id}/>
         <Comments />
         <Banner title={title} text={text} />
         <Footer />

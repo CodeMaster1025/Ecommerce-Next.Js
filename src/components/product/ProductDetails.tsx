@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import useCart from '@/hooks/useCart';
 import useProductsDescription from '@/hooks/useProductDescription';
+interface productId {
+  id: number | string | string[] | undefined;
+}
 
-const ProductDatails = (idProps: any): JSX.Element => {
+const ProductDatails = ({id}: productId): JSX.Element => {
 
   const { addToCart } = useCart();
   const [props, setProps] = useState<number>(0);
@@ -10,10 +13,10 @@ const ProductDatails = (idProps: any): JSX.Element => {
 
 
   useEffect(() => {
-    if (idProps && idProps.idProps) {
-      setProps(+idProps.idProps)
+    if (id) {
+      setProps(+id)
     }
-  }, [idProps]);
+  }, [id]);
 
   if (!productsDescription || !productsDescription[0]) {
     return <p>Carregando...</p>;
@@ -26,7 +29,7 @@ const ProductDatails = (idProps: any): JSX.Element => {
     <div className="text-gray-800 body-font overflow-hidden">
       <div className="container px-8 py-8 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <img alt="ecommerce" className="w-full md:h-1/3 md:w-1/3 object-cover object-center rounded border border-gray-200" src={productsDescription[0].photoLink}></img>
+          <img alt="ecommerce" className="w-full md:h-1/3 md:w-1/3 object-cover object-center rounded-md border border-gray-200" src={productsDescription[0].photoLink}></img>
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">GIOM</h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{productsDescription[0].name}</h1>
