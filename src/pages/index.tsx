@@ -15,7 +15,7 @@ const Home = () => {
   const primareCarouselList = "https://source.unsplash.com/featured/960x540?skirts,https://source.unsplash.com/featured/960x540?blouses,https://source.unsplash.com/featured/960x540?Pants,https://source.unsplash.com/featured/960x540?Scarf";
   const primareSrcList = primareCarouselList.split(',');
 
-  const secondaryCarouselList = "https://source.unsplash.com/featured/960x540?blouses,https://source.unsplash.com/featured/960x540?Pants,https://source.unsplash.com/featured/960x540?Scarf";
+  const secondaryCarouselList = "https://source.unsplash.com/featured/960x540?plantas,https://source.unsplash.com/featured/960x540?trees,https://source.unsplash.com/featured/960x540?nature";
   const secondarySrcList = secondaryCarouselList.split(',');
   const title = "Nossa História";
   const text = "Há muitos anos, nasceu uma loja que viria a se tornar uma referência em estilo, elegância e moda contemporânea. Essa loja, batizada de Moça Chic, não é apenas um espaço para compras, mas uma narrativa rica em história e compromisso com a expressão individual através da moda. A história da Loja Moça Chic começou com a visão apaixonada de sua fundadora, Maria Fernanda, uma mulher vibrante e cheia de criatividade. Determinada a criar um espaço que fosse mais do que uma simples vitrine de roupas, ela desejava construir um refúgio onde a moda pudesse contar histórias, abraçar a diversidade e empoderar aqueles que cruzassem seu caminho.";

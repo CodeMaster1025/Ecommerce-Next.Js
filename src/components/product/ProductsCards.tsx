@@ -56,7 +56,7 @@ const ProductsCards = ({categoryProps}: CategoryProps): JSX.Element => {
         <p className="text-md">R${discountedPrice}</p>
         <div className="flex justify-center items-center gap-1 mt-1">
           <div className="md:text-3xl text-yellow-400">{Array(Math.min(5, Math.max(1, Math.floor(stars)))).fill('★').join('')}</div>
-          <span className="text-xs"> ({Math.floor(stars)})</span>
+          <span className="text-xs text-center"> ({Math.floor(stars)})</span>
         </div>
       </div>
     );
