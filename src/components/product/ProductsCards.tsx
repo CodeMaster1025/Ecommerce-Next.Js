@@ -3,6 +3,7 @@ import useCart from '@/hooks/useCart';
 import Link from 'next/link';
 import { useState } from 'react';
 import { ProgressSpinner } from 'primereact/progressspinner';
+import useLoading from '@/hooks/useLoading';
 
 
 type Product = {
@@ -24,13 +25,7 @@ type CategoryProps = {
 const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
   const { displayedProducts } = useProductsCards();
   const { addToCart } = useCart();
-  const [loading, setLoading] = useState(true);
-  const handleImageLoad = () => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  };
-
+  const { loading, handleImageLoad } = useLoading();
 
   const createProductTags = (product: Product) => {
     const { id, name, price, photoLink, offPrice, stars } = product;
