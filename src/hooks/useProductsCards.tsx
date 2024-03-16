@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 type Product = {
     id: number;
@@ -324,7 +324,7 @@ const productsList = [
 ];
 
 
-export default function useProducts() {
+const useProducts = () => {
     const [products, setProducts] = useState<Product[]>(productsList);
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
     const [categoria, setCategoria] = useState("");
@@ -377,3 +377,4 @@ export default function useProducts() {
  
     return { displayedProducts, onSetCategoryClick,  categoria };
   }
+  export default useProducts;

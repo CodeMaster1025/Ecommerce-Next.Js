@@ -12,7 +12,7 @@ type Product = {
     stars: number;
   };
 
-export default function useQuantities(products :Product[], totalPriceFunction: any) {
+const useQuantities = (products :Product[], totalPriceFunction: any) => {
     const [quantities, setQuantities] = useState<number[]>([1]);
 
     const handleDecreaseQuantity = (productId: number) => {
@@ -43,3 +43,4 @@ export default function useQuantities(products :Product[], totalPriceFunction: a
       )
 
 }
+export default useQuantities;

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useProducts from "./useProductsCards";
 
 type Product = {
@@ -14,21 +14,22 @@ type Product = {
 };
 
 
-export default function useProductsDescription(id :number) {
+const useProductsDescription = (id: number) => {
     const [productsDescription, setProductsDescription] = useState<Product[]>([]);
-    const {displayedProducts} = useProducts();
-    
+    const { displayedProducts } = useProducts();
+
 
     useEffect(() => {
         const fetchData = async () => {
-              const filteredProducts = displayedProducts.filter((product) => product.id === id);
-          setProductsDescription(filteredProducts);
+            const filteredProducts = displayedProducts.filter((product) => product.id === id);
+            setProductsDescription(filteredProducts);
         };
-    
+
         fetchData();
-      }, [id]); 
+    }, [id]);
 
     return (
-        {productsDescription, setProductsDescription}
+        { productsDescription, setProductsDescription }
     )
 }
+export default useProductsDescription;

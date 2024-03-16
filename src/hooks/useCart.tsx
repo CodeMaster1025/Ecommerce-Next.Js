@@ -13,7 +13,7 @@ type Product = {
     stars: number;
 };
 
-export default function useCart() {
+const useCart = () => {
     const [cart, setCart] = useState<Product[]>([]);
     const [cartUpdateFlag, setCartUpdateFlag] = useState<number>(0);
     
@@ -55,3 +55,4 @@ export default function useCart() {
         { cart, cartUpdateFlag, addToCart,setCart, removeProductById }
     )
 }
+export default useCart;

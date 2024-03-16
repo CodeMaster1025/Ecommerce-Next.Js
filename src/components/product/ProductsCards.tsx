@@ -1,4 +1,3 @@
-import React, { useCallback, useEffect } from 'react';
 import useProductsCards from '@/hooks/useProductsCards';
 import useCart from '@/hooks/useCart';
 import Link from 'next/link';

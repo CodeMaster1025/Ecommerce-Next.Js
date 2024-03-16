@@ -1,4 +1,3 @@
-import React from 'react';
 interface CommentProps {
     imgSrc: string;
     name: string;
