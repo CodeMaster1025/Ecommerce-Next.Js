@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.hide-scroll-bar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
 
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 :root {
@@ -43,6 +44,10 @@ body {
 @layer components {
   * {
     appearance: none;
+  }
+
+  #overflow-fix {
+    overflow: hidden;
   }
 
   body {
