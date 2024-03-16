@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Categories() {
+const Categories = () => {
     const categories = [
         { name: "FITNESS", label: "FITNESS" },
         { name: "SAPATOS", label: "SAPATOS" },
@@ -26,3 +26,4 @@ export default function Categories() {
         </div>
     );
 }
+export default Categories;

@@ -17,7 +17,7 @@ export const update = () => {
 
 };
 
-export default function Navbar(): JSX.Element {
+const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -37,12 +37,12 @@ export default function Navbar(): JSX.Element {
                     </span>
                 </a>
                 <div className="flex items-center justify-center md:order-2">
-                    <Link id="" href="/cart" className="block mr-2 mt-1 md:block">
-                        <button className="bg-orange-200 bg-opacity-25 md:shadow-md rounded-full justify-center items-center hover:bg-orange-400">
-                            <span className="relative inline-block md:p-2 md:scale-125">
+                    <Link href="/cart" className="block mr-1 mt-1 md:mr-0 md:mt-0 items-center text-center">
+                        <button className="relative bg-orange-200 bg-opacity-25 md:shadow-md rounded-full justify-center items-center hover:bg-orange-400">
+                            <span className="flex p-0.5 md:py-1.5 md:scale-125">
                                 <svg
-                                    width="20px"
-                                    height="20px"
+                                    width="18px"
+                                    height="18px"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export default function Navbar(): JSX.Element {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span id="cart" className="md:text-xs absolute -top-1 -right-1 md:top-0 md:right-0 px-0.5  text-xs bg-orange-500 text-white rounded-lg">
+                                <span id="cart" className="text-xs md:text-xs absolute -top-1 -right-1 md:-top-1.5 md:-right-0.5 px-0.5 bg-orange-500 text-white rounded-full">
 
                                 </span>
                             </span>
@@ -122,3 +122,4 @@ export default function Navbar(): JSX.Element {
         </nav>
     );
 }
+export default Navbar;
