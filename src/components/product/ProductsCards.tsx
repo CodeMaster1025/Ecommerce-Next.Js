@@ -28,7 +28,7 @@ const ProductsCards = ({categoryProps}: CategoryProps): JSX.Element => {
 
     return (
       <div id="products-cards" key={id} className="relative p-4 md:px-8 flex flex-col items-center justify-center text-center hover:scale-105">
-        <Link href={'/productDescription?id=' + product.id}>
+        <Link href={'/product-description?id=' + product.id}>
         <img src={photoLink} className="w-36 md:w-64 rounded-xl" alt={name} />
         </Link>
         <button
