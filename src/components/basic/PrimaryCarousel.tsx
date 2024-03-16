@@ -10,7 +10,7 @@ const CarouselFlow = ({ src }: CarouselFlowProps) => {
     <div className="h-56 sm:h-64 xl:h-80 2xl:h-[512px] bg-opacity-0 overflow-hidden">
       <Carousel leftControl=" " rightControl=" " indicators={false} slideInterval={1000}>
         {src.map((url, index) => (
-          <img key={index} src={url} alt={`Image ${index}`} />
+          <img className='overflow-hidden' key={index} src={url} alt={`Image ${index}`} />
         ))}
       </Carousel>
     </div>
