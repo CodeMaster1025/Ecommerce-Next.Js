@@ -41,8 +41,8 @@ const Navbar = () => {
                         <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400">
                             <span className="flex p-1 md:p-2 scale-120 md:scale-150">
                                 <svg
-                                    width="22px"
-                                    height="19px"
+                                    width="24px"
+                                    height="21px"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
