@@ -57,7 +57,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
                 9.83391L4.18051 17.8339C4.08334 18.9999 5.00352 20 6.1736 20H17.8264C18.9965 20 19.9167 18.9999 19.8195 17.8339L19.1528
                  9.83391C19.0664 8.79732 18.1999 8 17.1597 8H16M8 8H16"
               stroke="#000000"
-              strokeWidth="1.0"
+              strokeWidth="0.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />

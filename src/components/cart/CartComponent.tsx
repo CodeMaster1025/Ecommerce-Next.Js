@@ -60,7 +60,7 @@ const CartComponent = () => {
                 <span className="font-semibold">Total</span>
                 <span>{total.toFixed(2)}</span>
               </div>
-              <button onClick={() => {handleClick()}} className="bg-orange-400 bg-opacity-50 hover:bg-orange-200 text-black py-2 px-4 rounded-lg mt-4 w-full">
+              <button onClick={() => {handleClick()}} className="bg-orange-300 hover:bg-orange-400 bg-opacity-75 text-black py-2 px-4 rounded-lg mt-4 w-full">
                 COMPRAR
               </button>
             </div>

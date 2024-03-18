@@ -38,11 +38,11 @@ const Navbar = () => {
                 </a>
                 <div className="flex items-center justify-center md:order-2">
                     <Link href="/cart" className="block mr-1 mt-1 md:mr-0 md:mt-0 items-center text-center">
-                        <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400">
+                        <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400 hover:bg-opacity-75">
                             <span className="flex p-1 md:p-2 scale-120 md:scale-150">
                                 <svg
-                                    width="24px"
-                                    height="21px"
+                                    width="22px"
+                                    height="22px"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const Navbar = () => {
                                            5.00352 20 6.1736 20H17.8264C18.9965 20 19.9167 18.9999 19.8195 
                                            17.8339L19.1528 9.83391C19.0664 8.79732 18.1999 8 17.1597 8H16M8 8H16"
                                         stroke="#000000"
-                                        strokeWidth="0.75"
+                                        strokeWidth="0.5"
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
                                     />
