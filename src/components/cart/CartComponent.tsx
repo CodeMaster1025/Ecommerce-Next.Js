@@ -1,11 +1,24 @@
 import { useEffect, useState } from "react";
 import PricePerProduct from "./PricePerProduct";
 import useCart from "@/hooks/useCart";
+import { useRouter } from "next/router";
 
 
 const CartComponent = () => {
   const [total, setTotal] = useState<number>(1);
   const { setCart, cart } = useCart();
+  const [message, setMessage] = useState<string>("Olá, tenho interesse nesses produtos:%0A");
+
+  const productsString = cart.map((product) => {
+    return `${product.name} - por: $${(product.price - (product.price * product.offPrice / 100)).toFixed(2)}%0A`;
+  }).join('');
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    console.log(productsString)
+    router.push(`https://api.whatsapp.com/send/?phone=5585996062620&text=${message + productsString}&type=phone_number&app_absent=0`);
+  };
 
   useEffect(() => {
     const storedCart = localStorage.getItem('cart');
@@ -47,7 +60,7 @@ const CartComponent = () => {
                 <span className="font-semibold">Total</span>
                 <span>{total.toFixed(2)}</span>
               </div>
-              <button className="bg-orange-400 bg-opacity-50 hover:bg-orange-200 text-black py-2 px-4 rounded-lg mt-4 w-full">
+              <button onClick={() => {handleClick()}} className="bg-orange-400 bg-opacity-50 hover:bg-orange-200 text-black py-2 px-4 rounded-lg mt-4 w-full">
                 COMPRAR
               </button>
             </div>

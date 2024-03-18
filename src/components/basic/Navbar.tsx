@@ -32,17 +32,17 @@ const Navbar = () => {
         <nav id="nav-bar" className="sticky top-0 z-50 bg-orange-100 text-black">
             <div className="w-full flex flex-wrap md:flex-nowrap items-center justify-between p-3 md:p-6">
                 <a href="#" className="flex items-center">
-                    <span className="md:w-full w-1/2">
+                    <span className="md:w-full w-1/2 md:hidden">
                         <Logo />
                     </span>
                 </a>
                 <div className="flex items-center justify-center md:order-2">
                     <Link href="/cart" className="block mr-1 mt-1 md:mr-0 md:mt-0 items-center text-center">
-                        <button className="relative bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400">
-                            <span className="flex p-0.5 md:py-1.0 md:scale-125">
+                        <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400">
+                            <span className="flex p-1 md:p-2 scale-120 md:scale-150">
                                 <svg
-                                    width="20px"
-                                    height="20px"
+                                    width="22px"
+                                    height="19px"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -61,8 +61,8 @@ const Navbar = () => {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span id="cart" className="text-xs md:text-xs absolute -top-1 -right-1 md:-top-1.5
-                                 md:-right-0.5 px-0.5 bg-orange-500 text-white rounded-full">
+                                <span id="cart" className="flex items-center justify-center w-[35%] h-[35%] text-xs md:text-sm absolute top-0 right-0 md:-top-0
+                                 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full">
                                 </span>
                             </span>
                         </button>
@@ -70,7 +70,7 @@ const Navbar = () => {
                     <button
                         onClick={toggleMenu}
                         type="button"
-                        className="text-yellow-800 text-opacity-50 md:hidden"
+                        className="text-yellow-800 text-opacity-50 hidden md:hidden"
                         aria-controls="navbar-search"
                         aria-expanded={isMenuOpen ? "true" : "false"}
                     >
@@ -93,11 +93,13 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div
-                    className={`items-center w-full md:flex md:justify-center md:items-center md:mt-8 ${isMenuOpen ? "block" : "hidden"
+                    className={`items-center w-full md:flex md:justify-center md:items-center md:mt-0 ${isMenuOpen ? "block" : "hidden"
                         }`}
                     id="navbar-search"
                 >
-                    <ul
+                    <Logo />
+
+                    {/* <ul
                         className="flex flex-col p-2 md:p-0 mt-2 font-medium border border-yellow-700
                          border-opacity-20 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                         <li className="">
@@ -120,7 +122,7 @@ const Navbar = () => {
                                 CONTATO
                             </a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
             <Script src="/flowbite.min.js"></Script>

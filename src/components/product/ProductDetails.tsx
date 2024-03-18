@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import useCart from '@/hooks/useCart';
 import useProductsDescription from '@/hooks/useProductDescription';
+import { ProgressSpinner } from 'primereact/progressspinner';
+import useLoading from '@/hooks/useLoading';
 interface productId {
   id: number | string | string[] | undefined;
 }
 
-const ProductDatails = ({id}: productId): JSX.Element => {
+const ProductDatails = ({ id }: productId): JSX.Element => {
 
   const { addToCart } = useCart();
   const [props, setProps] = useState<number>(0);
@@ -18,18 +20,23 @@ const ProductDatails = ({id}: productId): JSX.Element => {
     }
   }, [id]);
 
+  const { loading, handleImageLoad } = useLoading();
+
   if (!productsDescription || !productsDescription[0]) {
-    return <p>Carregando...</p>;
+    return <p>Carregando...</p>
   }
 
   const discountedPrice = (productsDescription[0].price - (productsDescription[0].price * productsDescription[0].offPrice) / 100).toFixed(2);
-
 
   return (
     <div className="text-gray-800 body-font overflow-hidden">
       <div className="container px-8 py-8 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <img alt="ecommerce" className="w-full md:h-1/3 md:w-1/3 object-cover object-center rounded-md border border-gray-200" src={productsDescription[0].photoLink}></img>
+          <img onLoad={handleImageLoad}
+            alt="ecommerce" className={`w-full md:h-1/3 md:w-1/3 object-cover object-center rounded-md border border-gray-200 ${loading ? 'hidden' : 'block'}`} src={productsDescription[0].photoLink}></img>
+          <span className='flex justify-end items-center'>
+            {loading && <ProgressSpinner style={{ width: '100px', height: '100px' }} strokeWidth="2" fill="transparent" animationDuration=".5s" />}
+          </span>
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">GIOM</h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{productsDescription[0].name}</h1>
@@ -66,7 +73,7 @@ const ProductDatails = ({id}: productId): JSX.Element => {
                 </a>
                 <a className="ml-2 text-gray-500">
                   <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                   </svg>
                 </a>
               </span>

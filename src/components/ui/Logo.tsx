@@ -9,8 +9,7 @@ export default function Logo() {
   };
 
   return (
-    <div onClick={handleClick}>
-      <Image className='w-auto h-auto'
+      <Image onClick={handleClick} className='w-auto h-auto hover:cursor-pointer'
         src="/GIOM2.png"
         width={175}
         height={175}
@@ -19,6 +18,5 @@ export default function Logo() {
         priority={true}
         alt="GIOM LOGO"
       />
-    </div>
-  );
+    );
 }
