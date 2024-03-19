@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import useCart from "@/hooks/useCart";
 import useProductCartQuantities from "@/hooks/useProductCartQuantities";
+import { Product } from "../type/Product";
 
-type Product = {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  quantityInStock: number;
-  categoryEnums: string;
-  photoLink: string;
-  offPrice: number;
-  stars: number;
-};
 interface Props {
   products: Product[];
   totalPriceFunction: (total: number) => void;

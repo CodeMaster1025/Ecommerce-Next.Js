@@ -1,22 +1,9 @@
 import useProductsCards from '@/hooks/useProductsCards';
 import useCart from '@/hooks/useCart';
 import Link from 'next/link';
-import { useState } from 'react';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import useLoading from '@/hooks/useLoading';
-
-
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  quantityInStock: number;
-  categoryEnums: string;
-  photoLink: string;
-  offPrice: number;
-  stars: number;
-};
+import { Product } from '../type/Product';
 
 type CategoryProps = {
   categoryProps: string | string[] | undefined;
