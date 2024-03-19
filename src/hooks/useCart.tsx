@@ -16,20 +16,17 @@ type Product = {
 const useCart = () => {
     const [cart, setCart] = useState<Product[]>([]);
     const [cartUpdateFlag, setCartUpdateFlag] = useState<number>(0);
-    
+
     useEffect(() => {
-        if(cart.length == 0) {
-            
-        }
         const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
         setCart(savedCart);
+        console.log(savedCart.length)
         setCartUpdateFlag(0);
     }, [cartUpdateFlag]);
 
     const addToCart = (product: Product): void => {
         setCart((prevCart) => {
             const isProductInCart = prevCart.some((cartItem) => cartItem.id === product.id);
-
             if (!isProductInCart) {
                 const newCart = [...prevCart, product];
                 localStorage.setItem('cart', JSON.stringify(newCart));
@@ -52,7 +49,7 @@ const useCart = () => {
     };
 
     return (
-        { cart, cartUpdateFlag, addToCart,setCart, removeProductById }
+        { cart, cartUpdateFlag, addToCart, setCart, removeProductById }
     )
 }
 export default useCart;

@@ -11,15 +11,20 @@ export const update = () => {
         const cartItems = JSON.parse(storedCart);
         const cartCount = cartItems.length;
         const coloredCartCount = `${cartCount}`;
-
         cartCount > 0 ? cartId.innerHTML = `${coloredCartCount}` : cartId.innerHTML = ``
+        if(cartCount > 0) {
+            cartId.classList.remove('hidden');
+            cartId.classList.add('flex');
+        } else {
+            cartId.classList.add('hidden');
+            cartId.classList.remove('flex');
+        }
     }
 
 };
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     useEffect(() => {
         update();
     }, []);
@@ -39,9 +44,9 @@ const Navbar = () => {
                 <div className="flex items-center justify-center md:order-2">
                     <Link href="/cart" className="block mr-1 mt-1 md:mr-0 md:mt-0 items-center text-center">
                         <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400 hover:bg-opacity-75">
-                            <span className="flex p-1 md:p-2 scale-120 md:scale-150">
+                            <span className="flex p-1 md:p-2 scale-125 md:scale-150">
                                 <svg
-                                    width="22px"
+                                    width="18px"
                                     height="22px"
                                     viewBox="0 0 24 24"
                                     fill="none"
@@ -61,8 +66,7 @@ const Navbar = () => {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span id="cart" className="flex items-center justify-center w-[35%] h-[35%] text-xs md:text-sm absolute top-0 right-0 md:-top-0
-                                 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full">
+                                <span id="cart" className={`hidden items-center justify-center p-1.5 w-[25%] h-[25%] text-xs absolute top-0 -right-0.5 md:top-0.5 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full`}>
                                 </span>
                             </span>
                         </button>
