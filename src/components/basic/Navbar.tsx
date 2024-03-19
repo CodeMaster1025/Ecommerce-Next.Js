@@ -42,12 +42,12 @@ const Navbar = () => {
                     </span>
                 </a>
                 <div className="flex items-center justify-center md:order-2">
-                    <Link href="/cart" className="block mr-1 mt-1 md:mr-0 md:mt-0 items-center text-center">
+                    <Link href="/cart" className="">
                         <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400 hover:bg-opacity-75">
-                            <span className="flex p-1 md:p-2 scale-125 md:scale-150">
+                            <span className="flex p-1 md:p-2 scale-150 md:scale-150">
                                 <svg
                                     width="18px"
-                                    height="22px"
+                                    height="18px"
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"

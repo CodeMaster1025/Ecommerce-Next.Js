@@ -7,6 +7,7 @@ import CarouselGrid from "@/components/basic/SecondaryCarousel";
 import Categories from "@/components/product/Categories";
 import Comments from "@/components/basic/Comments";
 import Banner from "@/components/basic/Banner";
+import WhatsAppLogo from "@/components/ui/WhatsAppLogo";
 
 const Home = () => {
   const router = useRouter();
@@ -30,6 +31,7 @@ const Home = () => {
       <Comments />
       <Banner title={title} text={text}/>
       <Footer />
+      <WhatsAppLogo />
     </section>
   );
 }

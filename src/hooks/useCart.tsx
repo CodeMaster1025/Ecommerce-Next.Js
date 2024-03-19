@@ -20,7 +20,6 @@ const useCart = () => {
     useEffect(() => {
         const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
         setCart(savedCart);
-        console.log(savedCart.length)
         setCartUpdateFlag(0);
     }, [cartUpdateFlag]);
 
