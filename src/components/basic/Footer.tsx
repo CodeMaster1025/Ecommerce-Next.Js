@@ -1,5 +1,4 @@
 import FooterLogo from "../ui/FooterLogo";
-import WhatsAppLogo from "../ui/WhatsAppLogo";
 
 const Footer = (): JSX.Element => {
     return (

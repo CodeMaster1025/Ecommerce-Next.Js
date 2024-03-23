@@ -1,17 +1,7 @@
 import { useEffect, useState } from "react";
 import { update } from "../components/basic/Navbar";
+import { Product } from "@/components/type/Product";
 
-type Product = {
-    id: number;
-    name: string;
-    price: number;
-    description: string;
-    quantityInStock: number;
-    categoryEnums: string;
-    photoLink: string;
-    offPrice: number;
-    stars: number;
-};
 
 const useCart = () => {
     const [cart, setCart] = useState<Product[]>([]);

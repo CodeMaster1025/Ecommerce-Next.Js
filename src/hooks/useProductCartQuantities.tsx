@@ -1,16 +1,6 @@
+import { Product } from "@/components/type/Product";
 import { useEffect, useState } from "react";
 
-type Product = {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    quantityInStock: number;
-    categoryEnums: string;
-    photoLink: string;
-    offPrice: number;
-    stars: number;
-  };
 
 const useQuantities = (products :Product[], totalPriceFunction: any) => {
     const [quantities, setQuantities] = useState<number[]>([1]);

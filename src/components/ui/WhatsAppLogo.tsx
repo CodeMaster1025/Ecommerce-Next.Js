@@ -3,10 +3,10 @@ import { useRouter } from 'next/router';
 
 export default function WhatsAppLogo() {
     const router = useRouter();
+    const message = 'Olá, gostaria de saber mais informações sobre os produtos da GIOM.';
 
     const handleClick = () => {
-        router.push('/');
-    };
+        router.push(`https://api.whatsapp.com/send/?phone=5585996062620&text=${message}&type=phone_number&app_absent=0`)};
 
     return (
 
