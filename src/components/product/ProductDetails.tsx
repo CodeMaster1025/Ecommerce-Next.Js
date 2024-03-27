@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import useCart from '@/hooks/useCart';
+import React, { useContext, useEffect, useState } from 'react';
 import useProductsDescription from '@/hooks/useProductDescription';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import useLoading from '@/hooks/useLoading';
+import CartContext from '@/hooks/useCart';
 interface productId {
   id: number | string | string[] | undefined;
 }
 
 const ProductDatails = ({ id }: productId): JSX.Element => {
 
-  const { addToCart } = useCart();
+  const { addToCart } = useContext(CartContext);
   const [props, setProps] = useState<number>(0);
   const { productsDescription } = useProductsDescription(props);
 
