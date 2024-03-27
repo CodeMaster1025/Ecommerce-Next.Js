@@ -8,7 +8,7 @@ const CartModal = () => {
 
 
     return (
-        <div className="bg-orange-50 w-full md:w-80 rounded-md p-6 md:p-10 shadow-xl">
+        <div className="bg-orange-50 bg-opacity-95 w-full md:w-80 rounded-md p-6 md:p-10 shadow-xl">
             <ul className="space-y-2">
                 {cart.map((product: any) => (
                     <li key={product.id} className="flex items-center space-y-2 space-x-2 md:space-x-4">
