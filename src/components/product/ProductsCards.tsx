@@ -4,7 +4,7 @@ import { ProgressSpinner } from 'primereact/progressspinner';
 import useLoading from '@/hooks/useLoading';
 import { Product } from '../type/Product';
 import { useContext } from 'react';
-import CartContext from '@/hooks/useCart';
+import CartContext from '../context/cartContext';
 
 type CategoryProps = {
   categoryProps: string | string[] | undefined;

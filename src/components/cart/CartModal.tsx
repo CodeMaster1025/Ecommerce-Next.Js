@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import CartContext from "@/hooks/useCart";
 import Link from "next/link";
+import CartContext from "../context/cartContext";
 
 const CartModal = () => {
     const { cart, price, removeAllProducts } = useContext(CartContext);

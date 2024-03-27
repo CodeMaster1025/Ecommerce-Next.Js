@@ -1,8 +1,8 @@
 import Script from "next/script";
 import Logo from "../ui/Logo";
-import { use, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartModal from "../cart/CartModal";
-import CartContext from "@/hooks/useCart";
+import CartContext from "../context/cartContext";
 
 
 

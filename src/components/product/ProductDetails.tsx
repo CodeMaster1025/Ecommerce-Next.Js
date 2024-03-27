@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import useProductsDescription from '@/hooks/useProductDescription';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import useLoading from '@/hooks/useLoading';
-import CartContext from '@/hooks/useCart';
+import CartContext from '../context/cartContext';
+
 interface productId {
   id: number | string | string[] | undefined;
 }

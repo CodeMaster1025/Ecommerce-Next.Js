@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import useProductCartQuantities from "@/hooks/useProductCartQuantities";
 import { Product } from "../type/Product";
-import CartContext from "@/hooks/useCart";
+import CartContext from "../context/cartContext";
 
 interface Props {
   products: Product[];
