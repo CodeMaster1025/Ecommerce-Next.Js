@@ -59,10 +59,6 @@ body {
     @apply text-black bg-orange-50 bg-opacity-5 rounded-xl;
   }
 
-  #nav-bar li {
-    @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
-  }
-
   #footer {
     @apply text-gray-800;
   }
