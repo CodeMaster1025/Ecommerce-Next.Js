@@ -22,7 +22,7 @@ const useQuantities = (products :Product[], totalPriceFunction: any) => {
         let sum = 0;
         products.forEach((product) => {
           const quantity = quantities[product.id] || 1;
-          sum += quantity * product.price;
+          sum += quantity * (product.price - (product.price * product.offPrice / 100));
         });
         totalPriceFunction(sum)
       }, [products, quantities, totalPriceFunction]);

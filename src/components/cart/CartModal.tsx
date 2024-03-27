@@ -1,9 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import CartContext from "../context/cartContext";
+import PricePerProduct from "./PricePerProduct";
+
 
 const CartModal = () => {
     const { cart, price, removeAllProducts } = useContext(CartContext);
+
 
     return (
         <div className="bg-orange-50 w-full md:w-80 rounded-md p-6 md:p-10 shadow-xl">
@@ -13,12 +16,12 @@ const CartModal = () => {
                         <img className="w-12 h-12 md:w-20 md:h-20" src={product.photoLink} alt="Imagem do produto" />
                         <div>
                             <h5 className="text-xs md:text-sm font-semibold">{product.name}</h5>
-                            <h6 className="text-xs md:text-sm text-black">{product.price} <del className="text-gray-500">{product.price}</del></h6>
+                            <h6 className="text-xs md:text-sm text-black">{(product.price - (product.price * product.offPrice / 100)).toFixed(2)} <del className="text-gray-500">{product.price}</del></h6>
                         </div>
                     </li>
                 ))}
             </ul>
-            <h4 className="text-sm md:text-lg font-semibold mt-4">Total: <strong><br></br>R$ {price}</strong></h4>
+            {/* <h4 className="text-sm md:text-lg font-semibold mt-4">Valor de previa: <strong><br></br>R$ {price}</strong></h4> */}
             <div className="flex flex-col md:flex-row justify-center items-center mt-4 md:mt-6 gap-1 md:gap-4">
                 <button onClick={removeAllProducts} className="text-xs justify-center items-center md:text-sm text-orange-400 focus:outline-none">Esvaziar</button>
                 <Link href={"/cart"}>

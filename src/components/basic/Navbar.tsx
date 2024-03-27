@@ -54,7 +54,7 @@ const Navbar = () => {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span className={`${cartCount > 0 ? 'flex items-center justify-center p-1.5 w-[25%] h-[25%] text-xs absolute top-0 -right-0.5 md:top-0.5 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full' : 'hidden'}`}>
+                                <span className={`flex items-center justify-center p-1.5 w-[25%] h-[25%] text-xs absolute top-0 -right-0.5 md:top-0.5 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full`}>
                                     {cartCount}
                                 </span>
                             </span>
@@ -83,7 +83,7 @@ const Navbar = () => {
                             />
                         </svg>
                     </button>
-                    <span className={`${hidden ? 'hidden' : 'block absolute z-20 top-12 right-4 md:mt-10 md:top-12 md:right-7'}`}>
+                    <span className={`${hidden ? 'hidden' : 'block absolute z-20 top-12 right-4 md:mt-10 md:top-11 md:right-7'}`}>
                             <CartModal />
                     </span>
                 </div>
