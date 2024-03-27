@@ -6,7 +6,7 @@ import CartContext from "../context/cartContext";
 
 const CartComponent = () => {
   const [total, setTotal] = useState<number>(1);
-  const { cart } = useContext(CartContext);
+  const { cart, price } = useContext(CartContext);
 
   const [message, setMessage] = useState<string>("Olá, tenho interesse nesses produtos:%0A");
 
@@ -17,7 +17,6 @@ const CartComponent = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    console.log(productsString)
     router.push(`https://api.whatsapp.com/send/?phone=5585996062620&text=${message + productsString}&type=phone_number&app_absent=0`);
   };
 

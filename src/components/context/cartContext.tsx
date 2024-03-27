@@ -20,11 +20,13 @@ export default CartContext;
 export function CartProvider(props: any) {
     const [cart, setCart] = useState<Product[]>([]);
     const [cartUpdateFlag, setCartUpdateFlag] = useState<number>(0);
-    const [cartCount, setCartCount] = useState<number>(0);
+    const [cartCount, setCartCount] = useState<number>(cart.length);
+
 
     useEffect(() => {
         const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
         setCart(savedCart);
+        setCartCount(savedCart.length);
         setCartUpdateFlag(0);
     }, [cartUpdateFlag]);
 
@@ -34,7 +36,6 @@ export function CartProvider(props: any) {
             if (!isProductInCart) {
                 const newCart = [...prevCart, product];
                 localStorage.setItem('cart', JSON.stringify(newCart));
-                setCartCount(newCart.length);
                 setCartUpdateFlag(1);
                 return newCart;
             }
@@ -42,7 +43,7 @@ export function CartProvider(props: any) {
         });
     };
 
-    const price = cart.reduce((acc, product) => acc + product.price, 0).toFixed(2);
+    const price = cart.reduce((acc, product) => acc + (product.price - (product.price * product.offPrice / 100)), 0).toFixed(2);
 
     const removeAllProducts = (): void => {
         setCart([]);
@@ -55,7 +56,6 @@ export function CartProvider(props: any) {
         setCart((prevCart) => {
             const newCart = prevCart.filter((cartItem) => cartItem.id !== productId);
             localStorage.setItem('cart', JSON.stringify(newCart));
-            setCartCount(newCart.length);
             setCartUpdateFlag(1);
             return newCart;
         });
@@ -64,7 +64,7 @@ export function CartProvider(props: any) {
     return (
         <CartContext.Provider value={{
             cart, addToCart, setCart, price, removeProductById, removeAllProducts,
-            cartUpdateFlag, setCartUpdateFlag, cartCount, setCartCount
+            cartUpdateFlag, setCartUpdateFlag, cartCount, setCartCount,
         }}>
             {props.children}
         </CartContext.Provider>

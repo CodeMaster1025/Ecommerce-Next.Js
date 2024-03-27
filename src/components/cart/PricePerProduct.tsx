@@ -11,7 +11,7 @@ interface Props {
 const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
   const { quantities, handleDecreaseQuantity, handleIncreaseQuantity } = useProductCartQuantities(products, totalPriceFunction);
 
-  const { removeProductById, cart, price } = useContext(CartContext);
+  const { removeProductById, cart } = useContext(CartContext);
 
   if (!Array.isArray(cart)) {
     return null;
@@ -20,9 +20,10 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
   return (
     <tbody>
       {cart.map((product: Product) => {
-        const { id, name, photoLink } = product;
+        const { id, name, photoLink, price } = product;
         const quantity = quantities[id] || 1;
-        const totalPrice = (price);
+        const finalPrice = price - (price * product.offPrice / 100);
+        const totalPrice = (finalPrice * quantity).toFixed(2);
 
         return (
           <tr className="text-xs md:text-base" key={id}>
