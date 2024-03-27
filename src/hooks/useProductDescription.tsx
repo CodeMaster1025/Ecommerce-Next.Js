@@ -16,7 +16,7 @@ const useProductsDescription = (id: number) => {
         };
 
         fetchData();
-    }, [id]);
+    }, [id, displayedProducts]);
 
     return (
         { productsDescription, setProductsDescription }

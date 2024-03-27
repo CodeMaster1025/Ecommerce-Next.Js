@@ -1,7 +1,6 @@
 import { Product } from "@/components/type/Product";
 import { useEffect, useState } from "react";
 
-
 const useQuantities = (products :Product[], totalPriceFunction: any) => {
     const [quantities, setQuantities] = useState<number[]>([1]);
 
@@ -26,11 +25,11 @@ const useQuantities = (products :Product[], totalPriceFunction: any) => {
           sum += quantity * product.price;
         });
         totalPriceFunction(sum)
-      }, [products, quantities]);
+      }, [products, quantities, totalPriceFunction]);
 
       return (
         {quantities, handleDecreaseQuantity, handleIncreaseQuantity, setQuantities}
       )
-
 }
+
 export default useQuantities;
