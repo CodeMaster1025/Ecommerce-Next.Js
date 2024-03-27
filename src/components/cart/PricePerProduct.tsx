@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import useCart from "@/hooks/useCart";
+import { useContext, useEffect } from "react";
 import useProductCartQuantities from "@/hooks/useProductCartQuantities";
 import { Product } from "../type/Product";
+import CartContext from "@/hooks/useCart";
 
 interface Props {
   products: Product[];
@@ -10,10 +10,12 @@ interface Props {
 
 const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
   const { quantities, handleDecreaseQuantity, handleIncreaseQuantity } = useProductCartQuantities(products, totalPriceFunction);
-  const { removeProductById, cart } = useCart();
+  
+  const { removeProductById, cart } = useContext(CartContext);
+
 
   useEffect(() => {
-    const total = cart.reduce((acc, product) => acc + (quantities[product.id] || 1) * product.price, 0);
+    const total = cart.reduce((acc:any, product:any) => acc + (quantities[product.id] || 1) * product.price, 0);
     totalPriceFunction(total);
   }, [cart, quantities, totalPriceFunction]);
 

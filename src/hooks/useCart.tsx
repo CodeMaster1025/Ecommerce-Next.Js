@@ -1,11 +1,26 @@
-import { useEffect, useState } from "react";
-import { update } from "../components/basic/Navbar";
+import { createContext, useEffect, useState } from "react";
 import { Product } from "@/components/type/Product";
 
+interface CartContextType {
+    cart: Product[];
+    addToCart: (product: Product) => void;
+    removeProductById: (productId: number) => void;
+    setCart: (cart: Product[]) => void;
+    cartCount: number;
+    setCartCount: (count: number) => void;
+    cartUpdateFlag: number;
+    setCartUpdateFlag: (flag: number) => void;
+    removeAllProducts: () => void;
+    price: string;
+}
 
-const useCart = () => {
+const CartContext = createContext({} as CartContextType);
+export default CartContext;
+
+export function CartProvider(props: any) {
     const [cart, setCart] = useState<Product[]>([]);
     const [cartUpdateFlag, setCartUpdateFlag] = useState<number>(0);
+    const [cartCount, setCartCount] = useState<number>(0);
 
     useEffect(() => {
         const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -19,7 +34,7 @@ const useCart = () => {
             if (!isProductInCart) {
                 const newCart = [...prevCart, product];
                 localStorage.setItem('cart', JSON.stringify(newCart));
-                update();
+                setCartCount(newCart.length);
                 setCartUpdateFlag(1);
                 return newCart;
             }
@@ -27,18 +42,31 @@ const useCart = () => {
         });
     };
 
+    const price = cart.reduce((acc, product) => acc + product.price, 0).toFixed(2);
+
+    const removeAllProducts = (): void => {
+        setCart([]);
+        localStorage.removeItem('cart');
+        setCartCount(0);
+        setCartUpdateFlag(1);
+    }
+
     const removeProductById = (productId: number): void => {
         setCart((prevCart) => {
             const newCart = prevCart.filter((cartItem) => cartItem.id !== productId);
             localStorage.setItem('cart', JSON.stringify(newCart));
-            update();
+            setCartCount(newCart.length);
             setCartUpdateFlag(1);
             return newCart;
         });
     };
 
     return (
-        { cart, cartUpdateFlag, addToCart, setCart, removeProductById }
+        <CartContext.Provider value={{
+            cart, addToCart, setCart, price, removeProductById, removeAllProducts,
+            cartUpdateFlag, setCartUpdateFlag, cartCount, setCartCount
+        }}>
+            {props.children}
+        </CartContext.Provider>
     )
-}
-export default useCart;
+};

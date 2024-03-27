@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PricePerProduct from "./PricePerProduct";
-import useCart from "@/hooks/useCart";
 import { useRouter } from "next/router";
+import CartContext from "@/hooks/useCart";
 
 
 const CartComponent = () => {
   const [total, setTotal] = useState<number>(1);
-  const { setCart, cart } = useCart();
+  const { cart, setCart } = useContext(CartContext);
+
   const [message, setMessage] = useState<string>("Olá, tenho interesse nesses produtos:%0A");
 
-  const productsString = cart.map((product) => {
+  const productsString = cart.map((product :any) => {
     return `${product.name} - por: $${(product.price - (product.price * product.offPrice / 100)).toFixed(2)}%0A`;
   }).join('');
 

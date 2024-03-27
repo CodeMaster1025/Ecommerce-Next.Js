@@ -1,37 +1,26 @@
 import Script from "next/script";
 import Logo from "../ui/Logo";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { use, useContext, useEffect, useState } from "react";
+import CartModal from "../cart/CartModal";
+import CartContext from "@/hooks/useCart";
 
-export const update = () => {
-    const cartId = document.getElementById("cart");
-    const storedCart = localStorage.getItem("cart");
 
-    if (cartId && storedCart) {
-        const cartItems = JSON.parse(storedCart);
-        const cartCount = cartItems.length;
-        const coloredCartCount = `${cartCount}`;
-        cartCount > 0 ? cartId.innerHTML = `${coloredCartCount}` : cartId.innerHTML = ``
-        if(cartCount > 0) {
-            cartId.classList.remove('hidden');
-            cartId.classList.add('flex');
-        } else {
-            cartId.classList.add('hidden');
-            cartId.classList.remove('flex');
-        }
-    }
 
-};
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    useEffect(() => {
-        update();
-    }, []);
+    const { cartCount } = useContext(CartContext);
 
     const toggleMenu = () => {
         setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
     };
+
+    const [hidden, setHidden] = useState(true);
+
+    useEffect(() => {
+        if(cartCount === 0)
+        setHidden(true);
+    }, [cartCount]);
 
     return (
         <nav id="nav-bar" className="sticky top-0 z-50 bg-orange-100 text-black">
@@ -42,8 +31,7 @@ const Navbar = () => {
                     </span>
                 </a>
                 <div className="flex items-center justify-center md:order-2">
-                    <Link href="/cart" className="">
-                        <button className="relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400 hover:bg-opacity-75">
+                        <button onClick={() => {setHidden(!hidden)}} className={`relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-lg rounded-full hover:bg-orange-400 hover:bg-opacity-75`}>
                             <span className="flex p-1 md:p-2 scale-150 md:scale-150">
                                 <svg
                                     width="18px"
@@ -66,11 +54,11 @@ const Navbar = () => {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span id="cart" className={`hidden items-center justify-center p-1.5 w-[25%] h-[25%] text-xs absolute top-0 -right-0.5 md:top-0.5 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full`}>
+                                <span className={`${cartCount > 0 ? 'flex items-center justify-center p-1.5 w-[25%] h-[25%] text-xs absolute top-0 -right-0.5 md:top-0.5 md:-right-0 bg-orange-500 bg-opacity-85 text-white rounded-full' : 'hidden'}`}>
+                                    {cartCount}
                                 </span>
                             </span>
                         </button>
-                    </Link>
                     <button
                         onClick={toggleMenu}
                         type="button"
@@ -95,6 +83,9 @@ const Navbar = () => {
                             />
                         </svg>
                     </button>
+                    <span className={`${hidden ? 'hidden' : 'block absolute z-20 top-12 right-4 md:mt-10 md:top-12 md:right-7'}`}>
+                            <CartModal />
+                    </span>
                 </div>
                 <div
                     className={`items-center w-full md:flex md:justify-center md:items-center md:mt-0 ${isMenuOpen ? "block" : "hidden"

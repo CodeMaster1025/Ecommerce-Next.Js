@@ -1,9 +1,10 @@
 import useProductsCards from '@/hooks/useProductsCards';
-import useCart from '@/hooks/useCart';
 import Link from 'next/link';
 import { ProgressSpinner } from 'primereact/progressspinner';
 import useLoading from '@/hooks/useLoading';
 import { Product } from '../type/Product';
+import { useContext } from 'react';
+import CartContext from '@/hooks/useCart';
 
 type CategoryProps = {
   categoryProps: string | string[] | undefined;
@@ -11,7 +12,9 @@ type CategoryProps = {
 
 const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
   const { displayedProducts } = useProductsCards();
-  const { addToCart } = useCart();
+  
+  const { addToCart } = useContext(CartContext);
+  
   const { loading, handleImageLoad } = useLoading();
 
   const createProductTags = (product: Product) => {
