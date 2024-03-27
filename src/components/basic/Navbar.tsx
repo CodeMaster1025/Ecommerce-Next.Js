@@ -2,7 +2,7 @@ import Script from "next/script";
 import Logo from "../ui/Logo";
 import { useContext, useEffect, useState } from "react";
 import CartModal from "../cart/CartModal";
-import CartContext from "../context/cartContext";
+import CartContext from "../context/CartContext";
 
 
 

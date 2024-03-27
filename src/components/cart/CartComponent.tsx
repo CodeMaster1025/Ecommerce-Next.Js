@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import PricePerProduct from "./PricePerProduct";
 import { useRouter } from "next/router";
-import CartContext from "../context/cartContext";
+import CartContext from "../context/CartContext";
 
 
 const CartComponent = () => {

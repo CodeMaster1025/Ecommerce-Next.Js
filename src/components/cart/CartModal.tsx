@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
-import CartContext from "../context/cartContext";
+import CartContext from "../context/CartContext";
 import PricePerProduct from "./PricePerProduct";
 
 
