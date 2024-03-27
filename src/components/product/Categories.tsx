@@ -13,7 +13,7 @@ const Categories = () => {
     ];
 
     return (
-        <div className="fixed z-50 shadow-md bg-orange-200 text-black items-center justify-between w-full md:flex md:justify-center md:items-center md:mt-0" id="navbar-search">
+        <div className="fixed z-10 shadow-md bg-orange-200 text-black items-center justify-between w-full md:flex md:justify-center md:items-center md:mt-0" id="navbar-search">
             <ul id="categories-id" className="flex flex-row overflow-auto text-xs font-extralight md:text-base p-2 md:p-0 mt-2 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-opacity-0">
                 {categories.map((category) => (
                     <li key={category.name}>

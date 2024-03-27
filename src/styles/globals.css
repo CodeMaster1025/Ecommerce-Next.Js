@@ -60,11 +60,7 @@ body {
   }
 
   #nav-bar li {
-    @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg hover:underline
-  }
-
-  #categories-id li {
-    @apply hover:underline
+    @apply hover:scale-110 hover:rounded-lg text-xs md:text-lg
   }
 
   #footer {

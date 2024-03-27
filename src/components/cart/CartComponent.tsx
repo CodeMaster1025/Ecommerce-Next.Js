@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PricePerProduct from "./PricePerProduct";
-import useCart from "@/hooks/useCart";
 import { useRouter } from "next/router";
+import CartContext from "../context/cartContext";
 
 
 const CartComponent = () => {
   const [total, setTotal] = useState<number>(1);
-  const { setCart, cart } = useCart();
+  const { cart } = useContext(CartContext);
+
   const [message, setMessage] = useState<string>("Olá, tenho interesse nesses produtos:%0A");
 
-  const productsString = cart.map((product) => {
+  const productsString = cart.map((product :any) => {
     return `${product.name} - por: $${(product.price - (product.price * product.offPrice / 100)).toFixed(2)}%0A`;
   }).join('');
 
@@ -19,14 +20,6 @@ const CartComponent = () => {
     console.log(productsString)
     router.push(`https://api.whatsapp.com/send/?phone=5585996062620&text=${message + productsString}&type=phone_number&app_absent=0`);
   };
-
-  useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      const parsedCart = JSON.parse(storedCart);
-      setCart(parsedCart);
-    }
-  }, []);
 
   return (
     <div className="h-full mb-0 py-8 text-black">
