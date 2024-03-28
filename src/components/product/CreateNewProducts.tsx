@@ -1,40 +1,52 @@
-import { useState } from 'react';
+import { FormEvent } from 'react';
 
-export default function CreateNewProduct(): JSX.Element {
-  const [formData, setFormData] = useState({
-    name: '',
-    price: 0,
-    description: '',
-    quantityInStock: 0,
-    categoryEnums: '',
-    photoLink: '',
-    offPrice: 0,
-    stars: 0,
-  });
+const categoryEnumsOptions = [
+  'VESTIDOS',
+  'BLUSAS',
+  'CALCAS',
+  'SAIAS',
+  'CASACOS',
+  'SAPATOS',
+  'BOLSAS',
+  'ACESSORIOS',
+  'LINGERIE',
+  'FITNESS',
+  'MODA_PRAIA',
+  'MEIAS_E_COLLANTS',
+  'JOIAS',
+  'PERFUMES',
+  'MAQUIAGEM',
+  'CABELO',
+];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+const CreateNewProduct = (): JSX.Element => {
 
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    const dataToSend = {
+      name: formData.get('name'),
+      price: formData.get('price'),
+      description: formData.get('description'),
+      quantityInStock: formData.get('quantityInStock'),
+      categoryEnums: formData.get('categoryEnums'),
+      photoLink: formData.get('photoLink'),
+      offPrice: formData.get('offPrice'),
+      stars: formData.get('stars'),
+    }
+
+    const endPoint = 'http://localhost:8093/products';
+    const jsonData = JSON.stringify(dataToSend);
 
     try {
-      const response = await fetch('http://localhost:8093/products', {
+      const response = await fetch(endPoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: jsonData,
       });
-
-      console.log(JSON.stringify(formData))
-
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -45,24 +57,6 @@ export default function CreateNewProduct(): JSX.Element {
     }
   };
 
-  const categoryEnumsOptions = [
-    'VESTIDOS',
-    'BLUSAS',
-    'CALCAS',
-    'SAIAS',
-    'CASACOS',
-    'SAPATOS',
-    'BOLSAS',
-    'ACESSORIOS',
-    'LINGERIE',
-    'FITNESS',
-    'MODA_PRAIA',
-    'MEIAS_E_COLLANTS',
-    'JOIAS',
-    'PERFUMES',
-    'MAQUIAGEM',
-    'CABELO',
-  ];
 
   return (
     <div className="flex flex-col justify-center items-center w-full h-full mx-auto mb-8 mt-8 p-4 overflow-y-scroll text-gray-900 bg-opacity-0 rounded-md">
@@ -73,8 +67,6 @@ export default function CreateNewProduct(): JSX.Element {
           <input
             type="text"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -83,8 +75,6 @@ export default function CreateNewProduct(): JSX.Element {
           <input
             type="number"
             name="price"
-            value={formData.price}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -92,8 +82,6 @@ export default function CreateNewProduct(): JSX.Element {
           <label className="block text-sm font-medium text-gray-700">DESCRIÇÂO:</label>
           <textarea
             name="description"
-            value={formData.description}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -102,8 +90,6 @@ export default function CreateNewProduct(): JSX.Element {
           <input
             type="number"
             name="quantityInStock"
-            value={formData.quantityInStock}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -111,8 +97,6 @@ export default function CreateNewProduct(): JSX.Element {
           <label className="block text-sm font-medium text-gray-700">CATEGORIAS:</label>
           <select
             name="categoryEnums"
-            value={formData.categoryEnums}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           >
             <option value="">Select Category</option>
@@ -128,8 +112,6 @@ export default function CreateNewProduct(): JSX.Element {
           <input
             type="text"
             name="photoLink"
-            value={formData.photoLink}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -138,8 +120,6 @@ export default function CreateNewProduct(): JSX.Element {
           <input
             type="number"
             name="offPrice"
-            value={formData.offPrice}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -148,8 +128,6 @@ export default function CreateNewProduct(): JSX.Element {
           <input
             type="number"
             name="stars"
-            value={formData.stars}
-            onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
           />
         </div>
@@ -163,3 +141,4 @@ export default function CreateNewProduct(): JSX.Element {
     </div>
   );
 }
+export default CreateNewProduct;
