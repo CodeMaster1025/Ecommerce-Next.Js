@@ -22,7 +22,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
     const discountedPrice = (price - (price * offPrice) / 100).toFixed(2);
 
     return (
-      <div id="products-cards" key={id} className="relative p-4 md:px-8 flex flex-col items-center justify-center text-center border border-dashed border-orange-200 border-opacity-75 border-1 shadow-sm hover:scale-105">
+      <div id="products-cards" key={id} className="relative p-6 md:px-8 flex flex-col items-center justify-center text-center border border-dashed border-orange-200 border-opacity-75 border-1 shadow-sm hover:scale-105">
         <Link href={'/product-description?id=' + product.id}>
           <div>
             {loading && <ProgressSpinner style={{ width: '25px', height: '25px' }} strokeWidth="4" fill="transparent" animationDuration=".5s" />}
@@ -38,9 +38,9 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
           onClick={() => {
             addToCart(product);
           }}
-          className="absolute bottom-2 right-1 md:right-4 md:bottom-3 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
+          className="absolute bottom-3 right-1 md:right-4 md:bottom-3 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
         >
-          <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="21px" height="21px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 11.01V11M16 11.01V11M8 8V7C8 5.93913 8.42143 4.92172 9.17157 4.17157C9.92172 3.42143 10.9391 3 12 3C13.0609
                3 14.0783 3.42143 14.8284 4.17157C15.5786 4.92172 16 5.93913 16 7V8M8 8H6.84027C5.80009 8 4.93356 8.79732 4.84718
@@ -68,7 +68,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
 
     return (
       <div className="mx-auto mt-8 mb-8 md:mt-16 flex flex-col items-center justify-center md:w-5/6">
-        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 gap-8 sm:gap-16 lg:grid-cols-4">
+        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 gap-4 sm:gap-16 lg:grid-cols-4">
           {categoryProps != null
             ? displayedProducts
               .filter((product) => product.categoryEnums === categoryProps)
