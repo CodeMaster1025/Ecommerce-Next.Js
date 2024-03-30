@@ -22,7 +22,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
     const discountedPrice = (price - (price * offPrice) / 100).toFixed(2);
 
     return (
-      <div id="products-cards" key={id} className="relative p-3 md:px-8 flex flex-col items-center justify-center text-center border border-dashed border-orange-200 border-opacity-75 border-1 shadow-sm">
+      <div id="products-cards" key={id} className="relative p-4 md:p-12 flex flex-col items-center justify-center text-center border border-dashed border-orange-200 border-opacity-75 border-1 shadow-sm">
         <Link href={'/product-description?id=' + product.id}>
           <div>
             {loading && <ProgressSpinner style={{ width: '25px', height: '25px' }} strokeWidth="4" fill="transparent" animationDuration=".5s" />}
@@ -38,7 +38,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
           onClick={() => {
             addToCart(product);
           }}
-          className="absolute bottom-3 right-1 md:right-4 md:bottom-3 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
+          className="absolute bottom-1 right-1 md:right-4 md:bottom-3 mb-2 bg-orange-200 bg-opacity-25 text-black px-0 py-0 md:px-1 md:py-1 rounded-full hover:bg-orange-400"
         >
           <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -68,7 +68,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
 
     return (
       <div className="mx-auto mt-8 mb-8 md:mt-16 flex flex-col items-center justify-center md:w-5/6">
-        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 gap-4 sm:gap-16 lg:grid-cols-4">
+        <div id="products-list" className="grid grid-cols-2 justify-center items-center sm:grid sm:grid-cols-2 gap-3 sm:gap-16 lg:grid-cols-4">
           {categoryProps != null
             ? displayedProducts
               .filter((product) => product.categoryEnums === categoryProps)
