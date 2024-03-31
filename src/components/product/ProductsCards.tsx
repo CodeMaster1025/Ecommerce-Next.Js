@@ -22,14 +22,14 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
     const discountedPrice = (price - (price * offPrice) / 100).toFixed(2);
 
     return (
-      <div id="products-cards" key={id} className="relative p-4 md:p-12 flex flex-col items-center justify-center text-center border border-dashed border-orange-200 border-opacity-75 border-1 shadow-sm">
+      <div id="products-cards" key={id} className="relative p-4 md:p-8 flex flex-col items-center justify-center text-center border border-dashed border-orange-200 border-opacity-75 border-1 shadow-sm">
         <Link href={'/product-description?id=' + product.id}>
           <div>
             {loading && <ProgressSpinner style={{ width: '25px', height: '25px' }} strokeWidth="4" fill="transparent" animationDuration=".5s" />}
             <img
               onLoad={handleImageLoad}
               src={photoLink}
-              className={`w-36 md:w-64 rounded-md ${loading ? 'hidden' : 'block'}`}
+              className={`w-36 md:w-96 rounded-md ${loading ? 'hidden' : 'block'}`}
               alt={name}
             />
           </div>
