@@ -18,7 +18,7 @@ export default function ProductDescriptionPage() {
         <Navbar />
         <ProductDatails id={id}/>
         <Comments />
-        <Banner title={title} text={text} />
+        {/* <Banner title={title} text={text} /> */}
         <Footer />
     </section>
   );

@@ -9,10 +9,10 @@ export default function Logo() {
   };
 
   return (
-      <Image onClick={handleClick} className='w-auto h-auto hover:cursor-pointer'
+      <Image onClick={handleClick} className='w-[200px] xl:w-auto h-auto hover:cursor-pointer'
         src="/GIOM2.png"
-        width={175}
-        height={175}
+        width={300}
+        height={300}
         placeholder="blur"
         blurDataURL={'/GIOM2.png'}
         priority={true}
