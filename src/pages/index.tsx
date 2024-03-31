@@ -29,7 +29,7 @@ const Home = () => {
       <CarouselGrid src={secondarySrcList} />
       <ProductsCards categoryProps={category} />
       <Comments />
-      <Banner title={title} text={text}/>
+      {/* <Banner title={title} text={text}/> */}
       <Footer />
       <WhatsAppLogo />
     </section>

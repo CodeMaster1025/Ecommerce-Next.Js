@@ -3,7 +3,7 @@ import FooterLogo from "../ui/FooterLogo";
 
 const Footer = (): JSX.Element => {
     return (
-        <footer id="footer" className="flex item-center justify-center bg-orange-100 bg-opacity-50">
+        <footer id="footer" className="flex item-center justify-center bg-orange-200 bg-opacity-50">
             <div className="w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
