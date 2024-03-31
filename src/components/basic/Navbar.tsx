@@ -83,7 +83,7 @@ const Navbar = () => {
                             />
                         </svg>
                     </button>
-                    <span className={`${hidden ? 'hidden' : 'block absolute z-20 top-12 right-4 mt:4 md:mt-10 md:top-14 md:right-7 xl:top-11'}`}>
+                    <span className={`${hidden ? 'hidden' : 'block absolute z-20 top-12 right-4 mt:4 md:mt-10 md:top-14 md:right-7'}`}>
                             <CartModal />
                     </span>
                 </div>
