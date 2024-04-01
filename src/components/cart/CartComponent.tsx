@@ -26,7 +26,7 @@ const CartComponent = () => {
   };
 
   return (
-    <div className="h-full py-8 mb-0 text-black">
+    <div className="h-full py-8 my-8 text-black md:my-16">
       <div className="container px-4 mx-auto">
         <h1 id="carrinho" className="mb-4 text-2xl font-semibold">
           Carrinho

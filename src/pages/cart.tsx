@@ -3,6 +3,7 @@ import Footer from "../components/basic/Footer";
 import Navbar from "../components/basic/Navbar";
 import Banner from "../components/basic/Banner";
 import Comments from "@/components/basic/Comments";
+import Categories from "@/components/product/Categories";
 
 const CartPage = () => {
   const title = "Nossa História";
@@ -12,6 +13,7 @@ const CartPage = () => {
   return (
     <section className="">
       <Navbar />
+      <Categories />
       <CartComponent />
       <Comments />
       {/* <Banner title={title} text={text} /> */}

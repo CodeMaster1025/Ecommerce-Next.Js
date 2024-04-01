@@ -32,7 +32,7 @@ const ProductDatails = ({ id }: productId): JSX.Element => {
   ).toFixed(2);
 
   return (
-    <div className="overflow-hidden text-gray-800 body-font">
+    <div className="my-8 overflow-hidden text-gray-800 md:my-16 body-font">
       <div className="container px-8 py-8 mx-auto">
         <div className="flex flex-wrap mx-auto lg:w-4/5">
           <img
@@ -199,7 +199,7 @@ const ProductDatails = ({ id }: productId): JSX.Element => {
               </span>
               <button
                 onClick={() => addToCart(productsDescription[0])}
-                className="flex px-6 py-2 ml-auto text-white bg-orange-300 bg-opacity-75 border-0 rounded-full hover:bg-orange-400 focus:outline-none "
+                className="flex p-2 ml-auto text-white bg-orange-300 bg-opacity-75 border-0 rounded-full hover:bg-orange-400 focus:outline-none "
               >
                 <svg
                   width="25px"
