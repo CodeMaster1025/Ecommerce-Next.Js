@@ -12,6 +12,8 @@
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
     "next": "14.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
     "primereact": "^10.5.1",
     "react": "^18",
     "react-dom": "^18"

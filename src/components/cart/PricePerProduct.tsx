@@ -9,7 +9,8 @@ interface Props {
 }
 
 const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
-  const { quantities, handleDecreaseQuantity, handleIncreaseQuantity } = useProductCartQuantities(products, totalPriceFunction);
+  const { quantities, handleDecreaseQuantity, handleIncreaseQuantity } =
+    useProductCartQuantities(products, totalPriceFunction);
 
   const { removeProductById, cart } = useContext(CartContext);
 
@@ -22,14 +23,14 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
       {cart.map((product: Product) => {
         const { id, name, photoLink, price } = product;
         const quantity = quantities[id] || 1;
-        const finalPrice = price - (price * product.offPrice / 100);
+        const finalPrice = price - (price * product.offPrice) / 100;
         const totalPrice = (finalPrice * quantity).toFixed(2);
 
         return (
           <tr className="text-xs md:text-base" key={id}>
             <td className="py-2">
               <div className="flex items-center">
-                <img className="w-6 md:w-16 mr-4" src={photoLink} alt={name} />
+                <img className="w-6 mr-4 md:w-16" src={photoLink} alt={name} />
                 <span>{name}</span>
               </div>
             </td>
@@ -42,7 +43,9 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
                 >
                   -
                 </button>
-                <span className="text-center text-sm md:text-lg w-6 p-0">{quantity}</span>
+                <span className="w-6 p-0 text-sm text-center md:text-lg">
+                  {quantity}
+                </span>
                 <button
                   onClick={() => handleIncreaseQuantity(id)}
                   className="border border-black border-opacity-10 hover:scale-105 rounded-md p-0.5 md:p-1"
@@ -51,7 +54,7 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
                 </button>
                 <button
                   onClick={() => removeProductById(id)}
-                  className="opacity-50 text-center transition hover:text-red-800 hover:scale-105 rounded-md p-1 md:p-1"
+                  className="p-1 text-center transition rounded-md opacity-50 hover:text-red-800 hover:scale-105 md:p-1"
                 >
                   <span className="sr-only">Remove item</span>
                   <svg
@@ -60,7 +63,7 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
                     viewBox="0 0 24 24"
                     strokeWidth="1.0"
                     stroke="currentColor"
-                    className="h-3 w-3 md:w-6 md:h-6"
+                    className="w-3 h-3 md:w-6 md:h-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -72,7 +75,6 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
                         51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
                     />
                   </svg>
-
                 </button>
               </div>
             </td>
@@ -82,5 +84,5 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
       })}
     </tbody>
   );
-}
+};
 export default PricePerProduct;
