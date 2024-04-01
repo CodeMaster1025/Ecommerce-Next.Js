@@ -9,6 +9,12 @@ const config: Config = {
     'node_modules/flowbite-react/lib/esm/**/*.js',
   ],
   theme: {
+    colors: {
+      primary: 'rgb(255 248 241)',
+      secondary: 'rgb(254 236 220)',
+      tertiary: 'rgb(252 217 189)',
+      quaternary: 'rgb(253 186 140)',
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

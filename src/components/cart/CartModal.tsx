@@ -6,7 +6,7 @@ const CartModal = () => {
   const { cart, price, removeAllProducts } = useContext(CartContext);
 
   return (
-    <div className="w-full p-6 rounded-md shadow-xl bg-orange-50 bg-opacity-95 md:w-80 md:p-10">
+    <div className="w-full p-6 rounded-md shadow-xl bg-primary md:w-80 md:p-10">
       <ul className="space-y-2">
         {cart.map((product: any) => (
           <li
@@ -33,7 +33,12 @@ const CartModal = () => {
           </li>
         ))}
       </ul>
-      {/* <h4 className="mt-4 text-sm font-semibold md:text-lg">Valor de previa: <strong><br></br>R$ {price}</strong></h4> */}
+      <h4 className="mt-4 text-sm md:text-lg">
+        Total:{" "}
+        <strong>
+          <br></br>R$ {price}
+        </strong>
+      </h4>
       <div className="flex flex-col items-center justify-center gap-1 mt-4 md:flex-row md:mt-6 md:gap-4">
         <button
           onClick={removeAllProducts}
@@ -42,7 +47,7 @@ const CartModal = () => {
           Esvaziar
         </button>
         <Link href={"/cart"}>
-          <button className="text-xs md:text-sm px-3 md:px-4 py-1.5 md:py-2 bg-orange-300 text-white rounded-md hover:bg-orange-500 focus:outline-none transition duration-300 ease-in-out">
+          <button className="text-xs md:text-sm px-3 md:px-4 py-1.5 md:py-2 bg-quaternary text-white rounded-md hover:bg-orange-400 focus:outline-none">
             Ver Carrinho
           </button>
         </Link>

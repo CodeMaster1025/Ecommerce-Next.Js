@@ -14,7 +14,7 @@ const Categories = () => {
 
   return (
     <div
-      className="fixed z-10 items-center justify-between w-full text-black bg-orange-200 shadow-md md:flex md:justify-center md:items-center md:mt-0"
+      className="fixed z-10 items-center justify-between w-full text-black shadow-md bg-tertiary md:flex md:justify-center md:items-center md:mt-0"
       id="navbar-search"
     >
       <ul

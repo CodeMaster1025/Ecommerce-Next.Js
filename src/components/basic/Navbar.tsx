@@ -7,12 +7,7 @@ import Search from "../ui/SearchBar";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cartCount } = useContext(CartContext);
-
-  const toggleMenu = () => {
-    setIsMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
-  };
 
   const [hidden, setHidden] = useState(true);
 
@@ -21,7 +16,7 @@ const Navbar = () => {
   }, [cartCount]);
 
   return (
-    <nav id="nav-bar" className="sticky top-0 z-50 text-black bg-orange-100">
+    <nav className="sticky top-0 z-50 text-black bg-secondary">
       <div className="flex flex-wrap items-center justify-between w-full p-3 md:flex-nowrap md:p-6">
         <div className="flex items-center">
           <span className="w-1/2 md:w-full md:block">
@@ -55,7 +50,7 @@ const Navbar = () => {
             onClick={() => {
               setHidden(!hidden);
             }}
-            className={`relative w-[100%] h-[100%] bg-orange-300 md:p-1 bg-opacity-25 md:shadow-md rounded-full hover:bg-orange-400 hover:bg-opacity-75`}
+            className={`relative w-[100%] h-[100%] bg-tertiary md:p-1 bg-opacity-75 md:shadow-md rounded-full hover:bg-quaternary hover:bg-opacity-75`}
           >
             <span className="flex p-1 scale-150 md:p-2 md:scale-150">
               <svg
@@ -85,15 +80,6 @@ const Navbar = () => {
                 {cartCount}
               </span>
             </span>
-          </button>
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className="hidden text-yellow-800 text-opacity-50 md:hidden"
-            aria-controls="navbar-search"
-            aria-expanded={isMenuOpen ? "true" : "false"}
-          >
-            <span className="sr-only">Open main menu</span>
           </button>
           <span
             className={`${hidden ? "hidden" : "block absolute z-20 top-12 right-4 mt:4 md:mt-10 md:top-20 md:right-7"}`}

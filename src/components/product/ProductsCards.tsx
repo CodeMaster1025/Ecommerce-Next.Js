@@ -49,7 +49,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
           onClick={() => {
             addToCart(product);
           }}
-          className="absolute px-0 py-0 mb-2 text-black bg-orange-200 bg-opacity-25 rounded-full bottom-1 right-1 md:right-4 md:bottom-3 md:px-1 md:py-1 hover:bg-orange-400"
+          className="absolute px-0 py-0 mb-2 text-black rounded-full bg-secondary bottom-1 right-1 md:right-4 md:bottom-3 md:px-1 md:py-1 hover:bg-quaternary"
         >
           <svg
             width="20px"

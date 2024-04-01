@@ -199,7 +199,7 @@ const ProductDatails = ({ id }: productId): JSX.Element => {
               </span>
               <button
                 onClick={() => addToCart(productsDescription[0])}
-                className="flex p-2 ml-auto text-white bg-orange-300 bg-opacity-75 border-0 rounded-full hover:bg-orange-400 focus:outline-none "
+                className="flex p-2 ml-auto text-white bg-opacity-75 border-0 rounded-full bg-tertiary hover:bg-quaternary focus:outline-none "
               >
                 <svg
                   width="25px"
