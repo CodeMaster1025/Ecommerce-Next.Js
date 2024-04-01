@@ -51,16 +51,17 @@ body {
   }
 
   body {
-    @apply bg-orange-50;
+    @apply
+  bg-orange-50;
     font-family: "Playfair Display", serif;
   }
 
   #products-cards {
-    @apply text-black bg-orange-50 bg-opacity-5 rounded-xl;
+    @apply text-black;
   }
 
   #footer {
-    @apply text-gray-800;
+    @apply text-black;
   }
 
   #footer li {
@@ -70,8 +71,5 @@ body {
   #new-collection {
     font-family: 'Dancing Script', 'Helvetica Neue', cursive;
   }
-
-  #banner {
-    font-family: 'Dancing Script', 'Helvetica Neue', cursive;
-  }
+  
 }

@@ -28,12 +28,12 @@ const CartComponent = () => {
   return (
     <div className="h-full py-8 my-8 text-black md:my-16">
       <div className="container px-4 mx-auto">
-        <h1 id="carrinho" className="mb-4 text-2xl font-semibold">
+        {/* <h1 id="carrinho" className="mb-4 text-2xl font-semibold">
           Carrinho
-        </h1>
+        </h1> */}
         <div className="flex flex-col gap-4 md:flex-row">
           <div className="md:w-3/4">
-            <div className="p-4 mb-6 bg-gray-300 rounded-lg shadow-md bg-opacity-10">
+            <div className="p-4 mb-6 bg-opacity-25 rounded-lg shadow-md bg-primary">
               <table className="w-full">
                 <thead>
                   <tr className="text-xs md:text-lg">
@@ -51,7 +51,7 @@ const CartComponent = () => {
             </div>
           </div>
           <div className="md:w-1/4">
-            <div className="p-6 bg-gray-400 rounded-lg shadow-md bg-opacity-5">
+            <div className="p-6 bg-opacity-25 rounded-lg shadow-md bg-primary">
               <h2 className="mb-4 text-lg font-semibold">Resumo</h2>
               <div className="flex justify-between mb-2">
                 <span>Frete</span>
@@ -66,7 +66,7 @@ const CartComponent = () => {
                 onClick={() => {
                   handleClick();
                 }}
-                className="w-full px-4 py-2 mt-4 text-black bg-orange-300 bg-opacity-75 rounded-lg hover:bg-orange-400"
+                className="w-full px-4 py-2 mt-4 text-black rounded-lg bg-tertiary hover:bg-quaternary"
               >
                 COMPRAR
               </button>

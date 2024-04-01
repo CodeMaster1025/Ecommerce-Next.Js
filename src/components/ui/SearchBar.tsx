@@ -10,7 +10,7 @@ const Search = () => {
         type="text"
         id="Search"
         placeholder="O que procuras?"
-        className="w-full py-4 border-none rounded-lg shadow-sm focus:outline-none focus:ring-0 bg-orange-50 pe-10 sm:text-sm"
+        className="w-full py-4 border-none rounded-lg shadow-sm focus:outline-none focus:ring-0 bg-primary pe-10 sm:text-sm"
       />
 
       <span className="absolute inset-y-0 grid w-10 end-0 place-content-center">
