@@ -2,78 +2,108 @@ import Link from "next/link";
 import FooterLogo from "../ui/FooterLogo";
 
 const Footer = (): JSX.Element => {
-    return (
-        <footer id="footer" className="flex item-center justify-center bg-orange-200 bg-opacity-50">
-            <div className="w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                <div className="md:flex md:justify-between">
-                    <div className="mb-6 md:mb-0">
-                        <Link href="#" className="">
-                            <span className="hidden md:flex">
-                                <FooterLogo />
-                            </span>
+  return (
+    <footer
+      id="footer"
+      className="flex justify-center bg-orange-200 bg-opacity-50 item-center"
+    >
+      <div className="w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <Link href="#" className="">
+              <span className="hidden md:flex">
+                <FooterLogo />
+              </span>
 
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap"></span>
-                        </Link>
-                    </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2 uppercase">
-                        <div>
-                            <h2 className="mb-2 text-md font-bold uppercase">Redes</h2>
-                            <ul className="text-xs">
-                                <li className="mt-2">
-                                    <Link href="" className="hover:underline ">Instagram</Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="hover:underline">Facebook</Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="hover:underline">Youtube</Link>
-                                </li>
-                                <li>
-                                    <Link href="" className="hover:underline">Twitter</Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-2 text-md font-bold uppercase">Legal</h2>
-                            <ul className="text-xs">
-                                <li className="mt-2">
-                                    <Link href="#" className="hover:underline">Politica de Privacidade</Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:underline">Termos &amp; Condições</Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-2 text-md font-bold uppercase">Quer divulgar a marca?</h2>
-                            <ul className="text-xs">
-                                <li className="mt-2">
-                                    <Link href="#" className="hover:underline">Politica de colaboradores</Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:underline">Sobre nos</Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 className="mb-2 text-md font-bold uppercase">Parceiros</h2>
-                            <ul className="text-xs">
-                                <li className="mt-2">
-                                    <Link href="#" className="hover:underline">Empresas</Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="hover:underline">Influenciadores</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr className="my-6 sm:mx-auto border-gray-900 lg:my-8" />
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm  sm:text-center">© 2024 <Link href="" className="hover:underline">Leonardo™</Link>. All Rights Reserved.
-                    </span>
-                    {/* <div className="flex mt-4 sm:justify-center sm:mt-0"> */}
-                        {/* <Link href="#" className="">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap"></span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-8 uppercase sm:gap-6 sm:grid-cols-2">
+            <div>
+              <h2 className="mb-2 font-bold uppercase text-md">Redes</h2>
+              <ul className="text-xs">
+                <li className="mt-2">
+                  <Link href="" className="hover:underline ">
+                    Instagram
+                  </Link>
+                </li>
+                <li>
+                  <Link href="" className="hover:underline">
+                    Facebook
+                  </Link>
+                </li>
+                <li>
+                  <Link href="" className="hover:underline">
+                    Youtube
+                  </Link>
+                </li>
+                <li>
+                  <Link href="" className="hover:underline">
+                    Twitter
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-2 font-bold uppercase text-md">Legal</h2>
+              <ul className="text-xs">
+                <li className="mt-2">
+                  <Link href="#" className="hover:underline">
+                    Politica de Privacidade
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    Termos &amp; Condições
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-2 font-bold uppercase text-md">
+                Quer divulgar a marca?
+              </h2>
+              <ul className="text-xs">
+                <li className="mt-2">
+                  <Link href="#" className="hover:underline">
+                    Politica de colaboradores
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    Sobre nos
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-2 font-bold uppercase text-md">Parceiros</h2>
+              <ul className="text-xs">
+                <li className="mt-2">
+                  <Link href="#" className="hover:underline">
+                    Empresas
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    Influenciadores
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr className="my-6 border-gray-900 sm:mx-auto lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm sm:text-center">
+            © 2024{" "}
+            <Link href="" className="hover:underline">
+              Leonardo™
+            </Link>
+            . All Rights Reserved.
+          </span>
+          {/* <div className="flex mt-4 sm:justify-center sm:mt-0"> */}
+          {/* <Link href="#" className="">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                                 <path fillRule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2
                                 .021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
@@ -81,7 +111,7 @@ const Footer = (): JSX.Element => {
                             </svg>
                             <span className="sr-only">Facebook page</span>
                         </Link> */}
-                        {/* <Link href="#" className=" ms-5">
+          {/* <Link href="#" className=" ms-5">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
                                 <path d="M16.942 1.556a16.3 16.3 0 0 
                                 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 
@@ -98,7 +128,7 @@ const Footer = (): JSX.Element => {
                             </svg>
                             <span className="sr-only">Discord community</span>
                         </Link> */}
-                        {/* <Link href="#" className=" ms-5">
+          {/* <Link href="#" className=" ms-5">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
                                 <path fillRule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074
                                  0 0 0 1.8-2.235 8.344 8.344 0 0
@@ -114,10 +144,10 @@ const Footer = (): JSX.Element => {
                             </svg>
                             <span className="sr-only">Twitter page</span>
                         </Link> */}
-                    {/* </div> */}
-                </div>
-            </div>
-        </footer>
-    )
-}
+          {/* </div> */}
+        </div>
+      </div>
+    </footer>
+  );
+};
 export default Footer;

@@ -18,7 +18,8 @@ const config: Config = {
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    ['prettier-plugin-tailwindcss']
   ]
 };
 export default config;
