@@ -1,7 +1,7 @@
 import { Carousel } from "flowbite-react";
 
 interface CarouselGridProps {
-  src: string[];
+  src: string[][];
 }
 const CarouselGrid = ({ src }: CarouselGridProps) => {
   return (
@@ -16,7 +16,7 @@ const CarouselGrid = ({ src }: CarouselGridProps) => {
           indicators={false}
           slideInterval={2000}
         >
-          {src.map((url, index) => (
+          {src[0].map((url, index) => (
             <img key={index} src={url} alt={`Image ${index}`} />
           ))}
         </Carousel>

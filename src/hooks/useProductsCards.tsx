@@ -1,4 +1,5 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import useImages from './useImages';
 
 type Product = {
   id: number;
@@ -11,6 +12,8 @@ type Product = {
   offPrice: number;
   stars: number;
 };
+
+
 
 const productsList = [
   {
@@ -351,7 +354,15 @@ const productsList = [
   },
 ];
 
+
+
 const useProducts = () => {
+  const { images: primaryImage, loading: primaryLoading, error: primaryError } = useImages('pop fashion, sports, casual', 31);
+
+  productsList.forEach((product) => {
+    product.photoLink = primaryImage[0];
+  });
+
   const [products, setProducts] = useState<Product[]>(productsList);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [categoria, setCategoria] = useState("");
@@ -380,6 +391,17 @@ const useProducts = () => {
 
   //     fetchData();
   //   }, []);
+
+  useEffect(() => {
+    if (primaryImage.length > 0) {
+      const updatedProducts = productsList.map((product, index) => ({
+        ...product,
+        photoLink: primaryImage[index % primaryImage.length] || product.photoLink,
+      }));
+      setProducts(updatedProducts);
+    }
+  }, [primaryImage]);
+
 
   const onSetCategoryClick = useCallback(
     (categoryValue: string) => {
