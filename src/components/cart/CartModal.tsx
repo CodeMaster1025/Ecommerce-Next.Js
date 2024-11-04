@@ -14,7 +14,7 @@ const CartModal = () => {
             className="flex items-center space-x-2 space-y-2 md:space-x-4"
           >
             <img
-              className="w-10 h-12 rounded-md md:w-20 md:h-20"
+              className="object-cover w-10 h-12 rounded-md md:w-20 md:h-20"
               src={product.photoLink}
               alt="Imagem do produto"
             />

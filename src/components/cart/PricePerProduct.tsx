@@ -29,8 +29,8 @@ const PricePerProduct = ({ products, totalPriceFunction }: Props) => {
         return (
           <tr className="text-xs md:text-base" key={id}>
             <td className="py-2">
-              <div className="flex items-center">
-                <img className="w-6 mr-4 md:w-16" src={photoLink} alt={name} />
+              <div className="flex">
+                <img className="object-cover rounded-md w-6 mr-4 md:w-20" src={photoLink} alt={name} />
                 <span>{name}</span>
               </div>
             </td>

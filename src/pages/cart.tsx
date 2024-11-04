@@ -15,8 +15,8 @@ const CartPage = () => {
       <Navbar />
       <Categories />
       <CartComponent />
-      <Comments />
-      {/* <Banner title={title} text={text} /> */}
+      {/* <Comments /> */}
+      <Banner title={title} text={text} />
       <Footer />
     </section>
   );

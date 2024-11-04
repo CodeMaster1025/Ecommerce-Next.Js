@@ -37,7 +37,7 @@ const CartComponent = () => {
               <table className="w-full">
                 <thead>
                   <tr className="text-xs md:text-lg">
-                    <th className="font-semibold text-left">Produto</th>
+                    <th className="font-semibold text-left py-4">Produtos</th>
                     <th className="font-semibold text-left">Preço</th>
                     <th className="font-semibold text-left">Quantidade</th>
                     <th className="font-semibold text-left">Total</th>
