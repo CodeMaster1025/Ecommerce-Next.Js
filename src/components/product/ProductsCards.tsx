@@ -40,7 +40,7 @@ const ProductsCards = ({ categoryProps }: CategoryProps): JSX.Element => {
             <img
               onLoad={handleImageLoad}
               src={photoLink}
-              className={`w-36 h-36 md:w-96 md:h-96 rounded-md ${loading ? "hidden" : "block"}`}
+              className={`object-cover md:w-96 md:h-96 rounded-md ${loading ? "hidden" : "block"}`}
               alt={name}
             />
           </div>
